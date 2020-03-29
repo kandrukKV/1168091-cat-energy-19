@@ -83,15 +83,18 @@
         <p class="living-example__expenses">Затраты на питание: 15 000 руб.</p>
 
         <article class="living-example__progress cat-progress">
-          <img class="cat-progress__img" src="https://via.placeholder.com/150x150">
+
+          <div class="cat-progress__wrap-img">
+            <img class="cat-progress__img-sm" src="https://via.placeholder.com/150x150">
+            <img class="cat-progress__img-lg" src="https://via.placeholder.com/150x150">
+          </div>
 
           <div class="cat-progress__wrap">
-            <span class="cat-progress__btn-label">было</span>
+            <button class="cat-progress__btn" type="button">Было</button>
             <div class="cat-progress__wrap-btn">
-              <button class="cat-progress__btn">было</button>
-              <button class="cat-progress__btn">стало</button>
+              <div class="cat-progress__toggle"></div>
             </div>
-            <span class="cat-progress__btn-label">стало</span>
+            <button class="cat-progress__btn" type="button">Стало</button>
           </div>
 
         </article>
@@ -101,7 +104,7 @@
       <section class="contacts">
 
         <div class="contacts__wrap">
-          <h2 class="contacts-head">приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="contacts__head">приглашаем к сотрудничеству дилеров!</h2>
           <p class="contacts__value">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
 

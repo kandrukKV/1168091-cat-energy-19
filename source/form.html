@@ -32,122 +32,119 @@
 
     <form class="ps-form" action="https://echo.htmlacademy.ru" method="post">
 
-      <ul class="ps-form__block-list">
 
-        <li class="ps-form__block-item">
-          <ul class="ps-form__input-list">
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="name">
-                имя:*
-                <input class="ps-form__input-txt" id="name" name="cat-name" type="text" placeholder="барсик">
-              </label>
-            </li>
 
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="weight">
-                вес:*
-                <input class="ps-form__input-txt" id="weight" name="cat-weight" type="text" placeholder="7">
-              </label>
-            </li>
+        <div class="ps-form__item">
 
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="age">
-                возраст (лет):
-                <input class="ps-form__input-txt" id="age" name="cat-age" type="text" placeholder="7">
-              </label>
-            </li>
-          </ul>
-        </li>
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="name">
+              имя:*
+              <input class="ps-form__input-txt" id="name" name="cat-name" type="text" placeholder="барсик">
+            </label>
+          </p>
 
-        <li class="ps-form__block-item">
-          <ul class="ps-form__input-list">
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="weight-down">
-                <input class="ps-form__input-radio" id="weight-down" name="weight-change" type="radio" value="похудение">
-                <span class="ps-form__radio-label">похудение</span>
-              </label>
-            </li>
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="weight">
+              вес:*
+              <input class="ps-form__input-txt" id="weight" name="cat-weight" type="text" placeholder="7">
+            </label>
+          </p>
 
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="weight-up">
-                <input class="ps-form__input-radio" id="weight-up" name="weight-change" type="radio" value="набор массы">
-                <span class="ps-form__radio-label">набор массы</span>
-              </label>
-            </li>
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="age">
+              возраст (лет):
+              <input class="ps-form__input-txt" id="age" name="cat-age" type="text" placeholder="7">
+            </label>
+          </p>
 
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="weight-noknow">
-                <input class="ps-form__input-radio" id="weight-noknow" name="weight-change" type="radio" value="не знаю">
-                <span class="ps-form__radio-label">не знаю (нужен ваш совет)</span>
-              </label>
-            </li>
+        </div>
 
-          </ul>
-        </li>
+        <div class="ps-form__item">
 
-        <li class="ps-form__block-item">
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="weight-down">
+              <input class="ps-form__input-radio" id="weight-down" name="weight-change" type="radio" value="похудение">
+              <span class="ps-form__radio-label">похудение</span>
+            </label>
+          </p>
+
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="weight-up">
+              <input class="ps-form__input-radio" id="weight-up" name="weight-change" type="radio" value="набор массы">
+              <span class="ps-form__radio-label">набор массы</span>
+            </label>
+          </p>
+
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="weight-noknow">
+              <input class="ps-form__input-radio" id="weight-noknow" name="weight-change" type="radio" value="не знаю">
+              <span class="ps-form__radio-label">не знаю (нужен ваш совет)</span>
+            </label>
+          </p>
+
+
+        </div>
+
+        <div class="ps-form__item">
           <h2 class="ps-form__title">Контактные данные (владельца кота)</h2>
-          <ul class="ps-form__input-list">
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="email">
-                e-mail:*
-                <input class="ps-form__input-txt ps-form__input-txt--mail" id="email" name="cat-email" type="text" placeholder="kuklachev@gmail.com">
-              </label>
-            </li>
 
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="phone">
-                телефон:*
-                <input class="ps-form__input-txt ps-form__input-txt--phone" id="phone" name="cat-phone" type="text" placeholder="8 (960) 900-60-90">
-              </label>
-            </li>
-          </ul>
-        </li>
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="email">
+              e-mail:*
+              <input class="ps-form__input-txt ps-form__input-txt--mail" id="email" name="cat-email" type="text" placeholder="kuklachev@gmail.com">
+            </label>
+          </p>
 
-        <li class="ps-form__block-item">
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="phone">
+              телефон:*
+              <input class="ps-form__input-txt ps-form__input-txt--phone" id="phone" name="cat-phone" type="text" placeholder="8 (960) 900-60-90">
+            </label>
+          </p>
+
+        </div>
+
+        <div class="ps-form__block-item">
           <h2 class="ps-form__title">Комментарий</h2>
-          <ul class="ps-form__input-list">
-            <li class="ps-form__input-item">
-              <textarea class="ps-form__input-txtarea" name="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </li>
-          </ul>
-        </li>
 
-        <li class="ps-form__block-item">
+          <p class="ps-form__input-wrap">
+            <textarea class="ps-form__input-txtarea" name="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </p>
+
+        </div>
+
+        <div class="ps-form__block-item">
           <h2 class="ps-form__title">Дополнительно</h2>
-          <ul class="ps-form__input-list">
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="sugar">
-                <input class="ps-form__input-check" id="sugar" name="cat-sugar" type="checkbox">
-                <span class="ps-form__check-label">сахарозаменитель</span>
-              </label>
-            </li>
 
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="water">
-                <input class="ps-form__input-check" id="water" name="cat-water" type="checkbox">
-                <span class="ps-form__check-label">питьевая вода</span>
-              </label>
-            </li>
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="sugar">
+              <input class="ps-form__input-check" id="sugar" name="cat-sugar" type="checkbox">
+              <span class="ps-form__check-label">сахарозаменитель</span>
+            </label>
+          </p>
 
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="milk">
-                <input class="ps-form__input-check" id="milk" name="cat-milk" type="checkbox">
-                <span class="ps-form__check-label">молоко</span>
-              </label>
-            </li>
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="water">
+              <input class="ps-form__input-check" id="water" name="cat-water" type="checkbox">
+              <span class="ps-form__check-label">питьевая вода</span>
+            </label>
+          </p>
 
-            <li class="ps-form__input-item">
-              <label class="ps-form__label" for="vitamins">
-                <input class="ps-form__input-check" id="vitamins" name="cat-vitamins" type="checkbox">
-                <span class="ps-form__check-label">витамины</span>
-              </label>
-            </li>
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="milk">
+              <input class="ps-form__input-check" id="milk" name="cat-milk" type="checkbox">
+              <span class="ps-form__check-label">молоко</span>
+            </label>
+          </p>
 
-          </ul>
-        </li>
+          <p class="ps-form__input-wrap">
+            <label class="ps-form__label" for="vitamins">
+              <input class="ps-form__input-check" id="vitamins" name="cat-vitamins" type="checkbox">
+              <span class="ps-form__check-label">витамины</span>
+            </label>
+          </p>
 
-      </ul>
+        </div>
 
       <button class="ps-form__btn" type="submit">Отправить заявку</button>
 
@@ -158,7 +155,7 @@
     <section class="contacts">
 
       <div class="contacts__wrap">
-        <h2 class="contacts-head">Приглашаем к сотрудничеству дилеров!</h2>
+        <h2 class="contacts__head">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="contacts__value">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
 
