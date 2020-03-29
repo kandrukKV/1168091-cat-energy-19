@@ -8,9 +8,12 @@
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo-link">
       <img class="page-header__logo-img" src="https://via.placeholder.com/150x150">
     </a>
+    <p class="page-header__shop-name">
+      <img class="page-header__shop-img" src="https://via.placeholder.com/150x150">
+    </p>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
@@ -25,11 +28,130 @@
 
   <main class="page-main">
     <h1 class="page-main__title">Подбор программы</h1>
-    <p class="page-main__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <strong class="page-main__message">Заполните анкету и мы подберем программу питания для вашего кота</strong>
 
-    <form class="programm-sel" action="https://echo.htmlacademy.ru" method="POST">
+    <form class="ps-form" action="https://echo.htmlacademy.ru" method="post">
 
-        <!-- module2-task2 -->
+      <ul class="ps-form__block-list">
+
+        <li class="ps-form__block-item">
+          <ul class="ps-form__input-list">
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="name">
+                имя:*
+                <input class="ps-form__input-txt" id="name" name="cat-name" type="text" placeholder="барсик">
+              </label>
+            </li>
+
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="weight">
+                вес:*
+                <input class="ps-form__input-txt" id="weight" name="cat-weight" type="text" placeholder="7">
+              </label>
+            </li>
+
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="age">
+                возраст (лет):
+                <input class="ps-form__input-txt" id="age" name="cat-age" type="text" placeholder="7">
+              </label>
+            </li>
+          </ul>
+        </li>
+
+        <li class="ps-form__block-item">
+          <ul class="ps-form__input-list">
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="weight-down">
+                <input class="ps-form__input-radio" id="weight-down" name="weight-change" type="radio" value="похудение">
+                <span class="ps-form__radio-label">похудение</span>
+              </label>
+            </li>
+
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="weight-up">
+                <input class="ps-form__input-radio" id="weight-up" name="weight-change" type="radio" value="набор массы">
+                <span class="ps-form__radio-label">набор массы</span>
+              </label>
+            </li>
+
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="weight-noknow">
+                <input class="ps-form__input-radio" id="weight-noknow" name="weight-change" type="radio" value="не знаю">
+                <span class="ps-form__radio-label">не знаю (нужен ваш совет)</span>
+              </label>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="ps-form__block-item">
+          <h2 class="ps-form__title">Контактные данные (владельца кота)</h2>
+          <ul class="ps-form__input-list">
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="email">
+                e-mail:*
+                <input class="ps-form__input-txt ps-form__input-txt--mail" id="email" name="cat-email" type="text" placeholder="kuklachev@gmail.com">
+              </label>
+            </li>
+
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="phone">
+                телефон:*
+                <input class="ps-form__input-txt ps-form__input-txt--phone" id="phone" name="cat-phone" type="text" placeholder="8 (960) 900-60-90">
+              </label>
+            </li>
+          </ul>
+        </li>
+
+        <li class="ps-form__block-item">
+          <h2 class="ps-form__title">Комментарий</h2>
+          <ul class="ps-form__input-list">
+            <li class="ps-form__input-item">
+              <textarea class="ps-form__input-txtarea" name="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </li>
+          </ul>
+        </li>
+
+        <li class="ps-form__block-item">
+          <h2 class="ps-form__title">Дополнительно</h2>
+          <ul class="ps-form__input-list">
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="sugar">
+                <input class="ps-form__input-check" id="sugar" name="cat-sugar" type="checkbox">
+                <span class="ps-form__check-label">сахарозаменитель</span>
+              </label>
+            </li>
+
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="water">
+                <input class="ps-form__input-check" id="water" name="cat-water" type="checkbox">
+                <span class="ps-form__check-label">питьевая вода</span>
+              </label>
+            </li>
+
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="milk">
+                <input class="ps-form__input-check" id="milk" name="cat-milk" type="checkbox">
+                <span class="ps-form__check-label">молоко</span>
+              </label>
+            </li>
+
+            <li class="ps-form__input-item">
+              <label class="ps-form__label" for="vitamins">
+                <input class="ps-form__input-check" id="vitamins" name="cat-vitamins" type="checkbox">
+                <span class="ps-form__check-label">витамины</span>
+              </label>
+            </li>
+
+          </ul>
+        </li>
+
+      </ul>
+
+      <button class="ps-form__btn" type="submit">Отправить заявку</button>
+
+      <p class="ps-form__comment">* — Обязательные поля</p>
 
     </form>
 
@@ -40,7 +162,9 @@
         <p class="contacts__value">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
 
-      <img class="contacts__map" src="https://via.placeholder.com/150x150">
+      <div class="contact__wrap">
+        <img class="contacts__map" src="https://via.placeholder.com/150x150">
+      </div>
 
     </section>
 
