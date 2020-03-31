@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Подбор программы: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+ <div class="container">
   <header class="page-header">
-    <a class="page-header__logo-link">
-      <img class="page-header__logo-img" src="https://via.placeholder.com/150x150">
-    </a>
-    <p class="page-header__shop-name">
-      <img class="page-header__shop-img" src="https://via.placeholder.com/150x150">
-    </p>
+    <div class="page-header__top">
+      <a class="page-header__logo-link">
+        <img class="page-header__logo" src="img/logo-mobile.svg" width="191" height="39">
+      </a>
+      <button class="hamburger hamburger--close" type="button">открыть меню</button>
+    </div>
+
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item"><a class="nav-list__link" href="index.html">Главная</a></li>
-          <li class="nav-list__item"><a class="nav-list__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="nav-list__item nav-list__item--active"><a>Подбор программы</a></li>
-        </ul>
-      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+        <li class="main-nav__item"><a>Подбор программы</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -31,8 +31,6 @@
     <strong class="page-main__message">Заполните анкету и мы подберем программу питания для вашего кота</strong>
 
     <form class="ps-form" action="https://echo.htmlacademy.ru" method="post">
-
-
 
         <div class="ps-form__item">
 
@@ -189,8 +187,8 @@
 
     </footer>
 
-
   </main>
+ </div>
 
 </body>
 </html>
