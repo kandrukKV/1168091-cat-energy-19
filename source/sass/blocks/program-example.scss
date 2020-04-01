@@ -18,7 +18,7 @@
   }
 
   &__title::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -5px;
     left: 0;
@@ -39,14 +39,14 @@
     margin-bottom: 20px;
     padding-bottom: 24px;
     position: relative;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Arial", "Helvetica", sans-serif;
     font-size: 14px;
     line-height: 18px;
     color: #444444;
   }
 
   &__desc::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -58,7 +58,7 @@
   &__link {
     position: relative;
     color: #111111;
-    font-weight: 16px;
+    font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
@@ -66,12 +66,12 @@
 
   &__link::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 7px;
     right: -37px;
     width: 25px;
     height: 12px;
-    background-image: url('../../img/icon-right-arrow-long.svg');
+    background-image: url("../../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
   }
 }

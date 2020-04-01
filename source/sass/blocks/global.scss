@@ -1,9 +1,11 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Oswald-Regular', Arial, Helvetica, sans-serif;
+  font-family: "Oswald-Regular", "Arial", "Helvetica", sans-serif;
 }
 
 img {

@@ -7,15 +7,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-    &--open {
-      width: 25px;
-      background-image: url('../../img/icon-mobile-menu.svg');
-    }
+  &--open {
+    width: 25px;
+    background-image: url("../../img/icon-mobile-menu.svg");
+  }
 
-    &--close {
-      width: 19px;
-      background-image: url('../img/icon-close.svg');
-    }
+  &--close {
+    width: 19px;
+    background-image: url("../../img/icon-close.svg");
+  }
 }
-
-
