@@ -1,0 +1,19 @@
+.hamburger {
+  height: 19px;
+  font-size: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--open {
+    width: 25px;
+    background-image: url("../../img/icon-mobile-menu.svg");
+  }
+
+  &--close {
+    width: 19px;
+    background-image: url("../../img/icon-close.svg");
+  }
+}

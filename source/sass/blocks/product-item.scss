@@ -1,0 +1,29 @@
+.product-item {
+  padding: 25px 20px;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    width: 100px;
+    color: #111111;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__desc {
+    width: 50%;
+    font-family: "Arial", "Helvetica", sans-serif;
+    color: #444444;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__parametr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
