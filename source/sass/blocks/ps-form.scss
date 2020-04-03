@@ -1,0 +1,121 @@
+.ps-form__message {
+  display: block;
+  padding: 0 0 0 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $text-color-2;
+}
+
+.ps-form__item {
+  padding: 20px 20px 23px 20px;
+  border-bottom: 1px solid $general-gray;
+}
+
+.ps-form__label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.ps-form__input-wrap {
+  margin: 0 0 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.ps-form__input-txt {
+  flex-grow: 1;
+  padding: 15px;
+  margin-left: 15px;
+  font-family: $first-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $text-color-4;
+}
+
+.ps-form__radio-wrap {
+  margin: 0 0 15px 0;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.ps-form__input-radio {
+  display: none;
+
+  &:checked + .ps-form__radio-indicator::after {
+    display: block;
+  }
+}
+
+.ps-form__radio-label {
+  position: relative;
+  padding-left: 45px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.ps-form__radio-indicator {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -4px;
+  left: 0;
+  border: solid 1px #cdcdcd;
+  border-radius: 50%;
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: $general-green;
+  }
+}
+
+.ps-form__input-check {
+  display: none;
+
+  &:checked + .ps-form__check-indicator {
+    background-image: url("../../img/icon-tick.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.ps-form__check-indicator {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -4px;
+  left: 0;
+  border: solid 1px #cdcdcd;
+}
+
+.ps-form__comment {
+  @include text-desc($line-height: 16px, $text-align: center);
+  margin: 23px 0 34px 0;
+}
+
+.ps-form__input-textarea {
+  padding: 12px;
+  resize: none;
+  width: 280px;
+  height: 150px;
+  font-family: $first-font;
+  font-size: 16px;
+  color: $text-color-4;
+  line-height: 18px;
+  text-transform: uppercase;
+}

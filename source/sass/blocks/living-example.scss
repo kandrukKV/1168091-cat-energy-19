@@ -1,20 +1,14 @@
 .living-example {
-  background-color: #f2f2f2;
+  background-color: $general-gray;
   padding: 33px 20px 38px;
 }
 
 .living-example__head {
-  margin: 0;
-  margin-bottom: 33px;
-  padding: 0;
-  font-size: 36px;
-  line-height: 60px;
+  @include titles($margin : 0 0 33px 0);
 }
 
 .living-example__desc {
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  @include text-desc;
 }
 
 .living-example__wrap {
@@ -33,7 +27,7 @@
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #111111;
+  color: $text-color-1;
   border-radius: 3px;
   border: solid 1px #cdcdcd;
 }
@@ -45,18 +39,17 @@
   padding: 0;
   width: 87px;
   text-align: center;
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: $second-font;
   font-size: 14px;
   line-height: 14px;
-  background-color: #f2f2f2;
+  background-color: $general-gray;
 }
 
 .living-example__expenses {
-  margin: 0;
-  margin-bottom: 44px;
+  margin: 0 0 44px 0;
   text-align: center;
   text-transform: uppercase;
-  color: #111111;
+  color: $text-color-1;
   font-size: 14px;
   line-height: 20px;
 }

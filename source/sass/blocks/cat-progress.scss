@@ -1,0 +1,51 @@
+.cat-progress__wrap-img {
+  position: relative;
+}
+
+.cat-progress__img-sm {
+  position: absolute;
+  z-index: 1;
+  background-color: $general-gray;
+}
+
+.cat-progress__img-lg {
+  position: relative;
+  z-index: 0;
+  background-color: $general-gray;
+}
+
+.cat-progress__wrap {
+  padding: 25px 0 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-progress__btn {
+  font-family: $first-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+  background-color: $general-gray;
+}
+
+.cat-progress__wrap-toggle {
+  position: relative;
+  margin: 0 10px 0 10px;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  width: 84px;
+  height: 14px;
+}
+
+.cat-progress__toggle {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $general-green;
+}

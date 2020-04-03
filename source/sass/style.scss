@@ -1,3 +1,4 @@
+@import "mixins";
 @import "fonts";
 @import "variables";
 @import "blocks/global";
@@ -6,13 +7,17 @@
 @import "blocks/page-header";
 @import "blocks/hamburger";
 @import "blocks/main-nav";
+@import "blocks/section-title";
 @import "blocks/program-selection";
 @import "blocks/button.scss";
 @import "blocks/program-example";
 @import "blocks/how-work";
 @import "blocks/living-example";
+@import "blocks/cat-progress";
 @import "blocks/contacts";
 @import "blocks/page-footer";
 @import "blocks/products";
 @import "blocks/product-item";
 @import "blocks/show-more";
+@import "blocks/present";
+@import "blocks/ps-form";
