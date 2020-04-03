@@ -2,14 +2,15 @@
   display: block;
   margin: 0 auto;
   padding: 14px 0;
-  max-width: 280px;
+  width: 280px;
   text-align: center;
-  color: #ffffff;
+  color: $text-color-w;
   text-decoration: none;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  background-color: #68b738;
+  background-color: $general-green;
+  border: none;
 
   &:hover {
     background-color: #5eaa2f;
@@ -20,7 +21,11 @@
   }
 
   &--gray {
-    background-color: #f2f2f2;
-    color: #444444;
+    background-color: $general-gray;
+    color: $text-color-4;
+  }
+
+  &--gray:hover {
+    background-color: #ebebeb;
   }
 }

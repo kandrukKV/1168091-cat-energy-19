@@ -1,23 +1,21 @@
 .program-example {
   padding: 22px 20px;
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
+.program-example__list {
+  @include list-clear;
+}
 
-  &__title {
-    position: relative;
-    margin: 0;
-    margin-bottom: 36px;
-    padding-left: 71px;
-    font-size: 24px;
-    line-height: 37px;
-    text-transform: uppercase;
-  }
+.program-example__title {
+  position: relative;
+  margin: 0 0 36px 0;
+  padding-left: 71px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
 
-  &__title::before {
+  &::before {
     content: "";
     position: absolute;
     top: -5px;
@@ -25,27 +23,23 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #68b738;
+    background-color: $general-green;
   }
+}
 
-  &__item {
-    padding: 22px 20px;
-    margin-bottom: 20px;
-    background-color: #f2f2f2;
-  }
+.program-example__item {
+  padding: 22px 20px;
+  margin-bottom: 20px;
+  background-color: $general-gray;
+}
 
-  &__desc {
-    margin: 0;
-    margin-bottom: 20px;
-    padding-bottom: 24px;
-    position: relative;
-    font-family: "Arial", "Helvetica", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    color: #444444;
-  }
+.program-example__desc {
+  @include text-desc;
+  margin: 0 0 20px 0;
+  padding-bottom: 24px;
+  position: relative;
 
-  &__desc::after {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -54,17 +48,18 @@
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);
   }
+}
 
-  &__link {
-    position: relative;
-    color: #111111;
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
+.program-example__link {
+  position: relative;
+  color: $text-color-1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
 
-  &__link::after {
+  &::after {
     position: absolute;
     content: "";
     top: 7px;

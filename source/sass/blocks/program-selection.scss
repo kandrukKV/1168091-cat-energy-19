@@ -2,30 +2,28 @@
   padding-top: 30px;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+}
 
-  &__head {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 19px;
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-    color: #ffffff;
-  }
+.program-selection__head {
+  padding: 0;
+  margin: 0 0 19px 0;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $text-color-w;
+}
 
-  &__subheader {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 29px;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
+.program-selection__subheader {
+  padding: 0;
+  margin: 0 0 29px 0;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color-w;
+}
 
-  &__wrap {
-    width: 280px;
-    margin: 0 auto;
-  }
+.program-selection__wrap {
+  width: 280px;
+  margin: 0 auto;
 }

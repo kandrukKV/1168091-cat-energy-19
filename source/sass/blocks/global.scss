@@ -5,7 +5,8 @@
 }
 
 body {
-  font-family: "Oswald-Regular", "Arial", "Helvetica", sans-serif;
+  font-family: $first-font;
+  font-weight: 400;
 }
 
 img {

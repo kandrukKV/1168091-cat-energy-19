@@ -1,0 +1,28 @@
+.present {
+  padding: 0 20px;
+}
+
+.present__title {
+  position: relative;
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: -100px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-w;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -130px;
+    left: 50%;
+    width: 56px;
+    height: 61px;
+    transform: translateX(-50%);
+    background-image: url("../../img/icon-gift.svg");
+  }
+}

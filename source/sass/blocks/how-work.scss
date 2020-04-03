@@ -1,30 +1,22 @@
 .how-work {
   padding: 0 20px;
+}
 
-  &__head {
-    margin: 0;
-    margin-bottom: 40px;
-    padding: 0;
-    font-size: 36px;
-    line-height: 60px;
-  }
+.how-work__head {
+  @include titles($margin : 0 0 33px 0);
+}
 
-  &__list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
+.how-work__list {
+  @include list-clear;
+}
 
-  &__item {
-    position: relative;
-    padding-left: 80px;
-    margin-bottom: 32px;
-    font-family: "Arial", "Helvetica", sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-  }
+.how-work__item {
+  @include text-desc;
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 32px;
 
-  &__item::before {
+  &::before {
     position: absolute;
     content: "";
     top: -6px;
