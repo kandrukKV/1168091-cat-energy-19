@@ -1,8 +1,6 @@
 .button {
+  padding: 14px 0 11px 0;
   display: block;
-  margin: 0 auto;
-  padding: 14px 0;
-  width: 280px;
   text-align: center;
   color: $text-color-w;
   text-decoration: none;
@@ -27,5 +25,12 @@
 
   &--gray:hover {
     background-color: #ebebeb;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 20px;
+    line-height: 20px;
   }
 }

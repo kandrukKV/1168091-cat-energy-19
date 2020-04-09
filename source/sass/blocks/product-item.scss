@@ -1,7 +1,15 @@
 .product-item {
   position: relative;
   padding: 25px 20px;
-  border-bottom: 1px solid $general-gray;
+
+  &--short {
+    padding-top: 14px;
+    padding-bottom: 17px;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .product-item__wrap {
@@ -19,17 +27,23 @@
 }
 
 .product-item__desc {
-  @include text-desc($line-height: 16px);
   width: 50%;
 }
 
 .product-item__parametr {
+  @include text-desc($line-height: 16px);
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
 }
 
-.product-item__parametr-name,
-.product-item__parametr-value {
-  @include text-desc($line-height: 14px);
+@media (min-width: $tablet-width) {
+  .product-item {
+    width: 325px;
+
+    &--short {
+      margin: 0;
+      width: 708px;
+    }
+  }
 }

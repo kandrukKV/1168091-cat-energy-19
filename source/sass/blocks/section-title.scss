@@ -29,3 +29,10 @@
     width: 0;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .section-title__value {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

@@ -4,8 +4,14 @@
 
 .cat-progress__img-sm {
   position: absolute;
+  width: 100%;
   z-index: 1;
+  overflow: hidden;
   background-color: $general-gray;
+}
+
+.cat-progress__img-sm img {
+  max-width: none;
 }
 
 .cat-progress__img-lg {
@@ -26,6 +32,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  color: $text-color-1;
   border: none;
   background-color: $general-gray;
 }
@@ -48,4 +55,50 @@
   height: 6px;
   border-radius: 3px;
   background-color: $general-green;
+}
+
+@media (min-width: $tablet-width) {
+  .cat-progress__img-sm {
+    width: 23%;
+  }
+
+  .cat-progress__btn {
+    font-size: 20px;
+    line-height: 20px;
+    background-color: #ffffff;
+  }
+
+  .cat-progress__wrap-toggle {
+    border: none;
+    background-color: #cdcdcd;
+    border-radius: 2.5px;
+    width: 428px;
+    height: 6px;
+  }
+
+  .cat-progress__toggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34px;
+    height: 34px;
+    border: solid 1px #cdcdcd;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $general-green;
+    }
+  }
 }

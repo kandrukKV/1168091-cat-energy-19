@@ -59,7 +59,27 @@
 
 .page-footer__made-link {
   color: #444444;
+  font-family: $second-font;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-footer__social-list {
+    &::after {
+      display: none;
+    }
+  }
 }

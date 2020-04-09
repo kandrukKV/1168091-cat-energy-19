@@ -22,6 +22,7 @@
 
 .ps-form__input-wrap {
   margin: 0 0 15px 0;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
 }
@@ -39,8 +40,7 @@
 }
 
 .ps-form__radio-wrap {
-  margin: 0 0 15px 0;
-  margin-top: 25px;
+  margin: 0 0 25px 0;
   display: flex;
   align-items: center;
 }
@@ -109,13 +109,56 @@
 }
 
 .ps-form__input-textarea {
-  padding: 12px;
+  @include centralizer($padding: 20px 20px);
   resize: none;
-  width: 280px;
   height: 150px;
   font-family: $first-font;
   font-size: 16px;
   color: $text-color-4;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .ps-form__message {
+    width: 350px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .ps-form__item {
+    @include centralizer($width: 630px, $padding: 0);
+    border: none;
+
+    &--check {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .ps-form__check-wrap {
+    width: 250px;
+  }
+
+  .ps-form__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .ps-form__radio-label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .ps-form__input-textarea {
+    @include centralizer($width: 630px, $padding: 20px 20px);
+    height: 175px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .ps-form__bottom {
+    display: flex;
+    align-items: center;
+  }
 }

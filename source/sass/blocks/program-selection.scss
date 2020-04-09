@@ -1,7 +1,13 @@
 .program-selection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding-top: 30px;
+  margin-bottom: 22px;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  color: $text-color-w;
+  text-align: center;
 }
 
 .program-selection__head {
@@ -9,21 +15,95 @@
   margin: 0 0 19px 0;
   font-size: 36px;
   line-height: 36px;
-  text-align: center;
-  color: $text-color-w;
+  font-weight: 400;
 }
 
-.program-selection__subheader {
+.program-selection__subhead {
   padding: 0;
   margin: 0 0 29px 0;
   font-size: 14px;
   line-height: 14px;
-  text-align: center;
   text-transform: uppercase;
-  color: $text-color-w;
 }
 
-.program-selection__wrap {
+.program-selection__button {
   width: 280px;
   margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .program-selection {
+    justify-content: flex-start;
+    padding: 0 30px;
+    color: $text-color-1;
+    background-image: none;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .program-selection__wrap-head {
+    width: 100%;
+    order: 1;
+  }
+
+  .program-selection__head {
+    margin-left: 90px;
+    margin-bottom: 33px;
+    font-size: 60px;
+    line-height: 60px;
+    color: $text-color-1;
+  }
+
+  .program-selection__subhead {
+    margin-left: 90px;
+    font-size: 20px;
+    line-height: 20px;
+    color: $text-color-1;
+  }
+
+  .program-selection__wrap-img {
+    margin-top: -50px;
+    order: 3;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .program-selection__button {
+    position: relative;
+    z-index: 2;
+    width: 245px;
+    margin: 0 0 0 90px;
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-selection {
+    position: relative;
+  }
+
+  .program-selection__wrap-head {
+    width: 50%;
+    order: 0;
+  }
+
+  .program-selection__wrap-img {
+    background-image: url("../../img/index-background-desktop@1x.jpg");
+    width: 50%;
+    min-height: 696px;
+    margin: 0;
+    order: 0;
+  }
+
+  .program-selection__img {
+    margin-left: -600px;
+  }
+
+  .program-selection__button {
+    position: absolute;
+    width: 245px;
+    top: 250px;
+  }
 }

@@ -1,3 +1,9 @@
 .page-main__title {
   @include titles();
 }
+
+@media (min-width: $tablet-width) {
+  .page-main__title {
+    @include titles($font-size: 60px, $line-height: 60px);
+  }
+}

@@ -1,16 +1,27 @@
-.page-header {
-  background-color: #ffffff;
+.page-header--nojs .hamburger {
+  display: none;
 }
 
-.page-header__top {
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+.page-header--nojs .main-nav {
+  display: block;
 }
 
 .page-header__logo {
-  width: 191px;
-  height: 39px;
+  padding: 11px 20px 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    padding: 0;
+  }
 }
