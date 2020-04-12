@@ -1,5 +1,5 @@
 .how-work {
-  padding: 0 20px;
+  @include centraror;
 }
 
 .how-work__head {
@@ -12,6 +12,7 @@
 
 .how-work__item {
   @include text-desc;
+  min-height: 54px;
   position: relative;
   padding-left: 80px;
   margin-bottom: 32px;
@@ -60,10 +61,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .how-work {
-    padding: 0 30px;
-  }
-
   .how-work__head {
     @include section-title($margin: 0 0 63px 0, $font-size: 60px, $line-height: 60px);
   }
@@ -88,11 +85,5 @@
       width: 80px;
       height: 80px;
     }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .how-work {
-    padding: 0 110px;
   }
 }

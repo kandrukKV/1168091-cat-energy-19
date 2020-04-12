@@ -7,7 +7,6 @@
 }
 
 .main-nav__item {
-  padding: 24px 0;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
@@ -18,13 +17,13 @@
 }
 
 .main-nav__item a {
+  padding: 24px 0;
   display: block;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
   color: $text-color-1;
   text-transform: uppercase;
-  text-align: center;
   text-decoration: none;
 }
 
@@ -70,7 +69,7 @@
         right: 0;
         left: 0;
         bottom: 15px;
-        height: 3px;
+        height: 2px;
         background-color: $general-green;
       }
     }
@@ -80,5 +79,19 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__item a {
+    color: #ffffff;
+  }
+
+  .main-nav__item {
+    &--active {
+      &::before {
+        background-color: #ffffff;
+      }
+    }
   }
 }
