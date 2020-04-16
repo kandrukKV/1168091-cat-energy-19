@@ -4,7 +4,8 @@
 }
 
 .living-example__header {
-  padding: 0 20px;
+  @include centrator;
+  margin-bottom: 35px;
 }
 
 .living-example__head {
@@ -122,12 +123,13 @@
 
 @media (min-width: $desktop-width) {
   .living-example {
-    padding: 0 110px;
+    @include centrator;
     display: flex;
     margin-bottom: 75px;
   }
 
   .living-example__header {
+    @include centrator-clear;
     width: 50%;
   }
 

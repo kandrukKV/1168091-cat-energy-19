@@ -1,5 +1,5 @@
 .page-footer {
-  @include centraror;
+  @include centrator;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -69,7 +69,7 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    @include centraror;
+    @include centrator;
     display: flex;
     justify-content: space-between;
   }

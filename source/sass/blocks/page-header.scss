@@ -7,7 +7,7 @@
 }
 
 .page-header__logo {
-  @include centraror();
+  @include centrator();
   padding-top: 11px;
   padding-bottom: 12px;
   display: flex;
@@ -17,7 +17,7 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    @include centraror();
+    @include centrator();
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -11,15 +11,36 @@
 }
 
 @media (min-width: $tablet-width) {
+  .products {
+    @include centrator;
+  }
+
   .products__list {
-    padding: 0 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    &--short {
+      display: block;
+      margin-bottom: 70px;
+    }
   }
 
+  .products__item {
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
   .products__wrap {
+    margin-bottom: 86px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+  }
+
+  .products__list {
+    &--short {
+      margin-bottom: 0;
+    }
   }
 }

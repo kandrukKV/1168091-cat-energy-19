@@ -1,37 +1,35 @@
 .section-title {
-  padding: 30px 0;
-  display: flex;
-  align-items: flex-start;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    background-color: $general-green;
+  }
 }
 
+
 .section-title__value {
-  flex-shrink: 2;
-  margin: 0 0 0 20px;
-  padding: 0;
+  @include centrator($padding: 20px 20px 20px 0);
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   color: $text-color-1;
 }
 
-.section-title__decor {
-  margin-top: 12px;
-  height: 3px;
-  background-color: $general-green;
-
-  &--right {
-    margin-left: 22px;
-    width: 50px;
-    flex-grow: 1;
-  }
-
-  &--left {
-    width: 0;
-  }
+.section-title__value span {
+  padding: 0 20px;
+  background-color: #ffffff;
 }
 
 @media (min-width: $tablet-width) {
   .section-title__value {
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 36px;
     line-height: 36px;
   }

@@ -1,5 +1,7 @@
 .show-more {
-  padding: 27px 20px 37px 20px;
+  @include centrator;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .show-more__plus {
@@ -23,4 +25,17 @@
   @include text-desc($line-height: 16px, $text-align: center);
   margin: 0;
   margin-bottom: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .show-more {
+    @include centrator-clear($margin: 0 0 70px 0, $padding: 165px 40px 40px 40px, $width: 320px);
+    border: 1px solid #cdcdcd;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .show-more {
+    width: 245px;
+  }
 }

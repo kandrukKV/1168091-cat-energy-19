@@ -1,5 +1,5 @@
 .contacts__header {
-  @include centraror;
+  @include centrator;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@
 
 .contacts__map-img {
   width: 100%;
-  height: 600px;
+  height: 400px;
 }
 
 @media (min-width: $tablet-width) {

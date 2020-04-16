@@ -83,15 +83,15 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav__item a {
-    color: #ffffff;
-  }
-
   .main-nav__item {
-    &--active {
+    &--w.&--active {
       &::before {
         background-color: #ffffff;
       }
+    }
+
+    &--w a {
+      color: #ffffff;
     }
   }
 }
