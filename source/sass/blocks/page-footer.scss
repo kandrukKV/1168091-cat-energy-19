@@ -1,5 +1,7 @@
 .page-footer {
-  padding: 20px 20px 20px 20px;
+  @include centrator;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .page-footer__logo {
@@ -12,7 +14,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 280px;
+    width: 100%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);
   }
@@ -31,7 +33,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 280px;
+    width: 100%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);
   }
@@ -59,7 +61,28 @@
 
 .page-footer__made-link {
   color: #444444;
+  font-family: $second-font;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    @include centrator;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-footer__social-list {
+    &::after {
+      display: none;
+    }
+  }
 }

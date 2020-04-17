@@ -1,5 +1,7 @@
 .present {
-  padding: 0 20px;
+  @include centrator;
+  background-color: #63a73a;
+  background-clip: content-box;
 }
 
 .present__title {
@@ -24,5 +26,17 @@
     height: 61px;
     transform: translateX(-50%);
     background-image: url("../../img/icon-gift.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .present {
+    @include centrator-clear($padding: 0, $width: 100%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .present {
+    width: 245px;
   }
 }

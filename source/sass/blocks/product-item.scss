@@ -1,7 +1,13 @@
 .product-item {
+  @include centrator;
+  padding-bottom: 25px;
+  padding-top: 25px;
   position: relative;
-  padding: 25px 20px;
-  border-bottom: 1px solid $general-gray;
+
+  &--short {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .product-item__wrap {
@@ -19,17 +25,50 @@
 }
 
 .product-item__desc {
-  @include text-desc($line-height: 16px);
   width: 50%;
 }
 
 .product-item__parametr {
+  @include text-desc($line-height: 16px);
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
 }
 
-.product-item__parametr-name,
-.product-item__parametr-value {
-  @include text-desc($line-height: 14px);
+@media (min-width: $tablet-width) {
+  .product-item {
+    @include centrator-clear($margin: 0 0 70px 0, $padding: 22px 40px 40px 40px, $width: 320px);
+    background-color: $general-gray;
+
+    &--short {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 28px 38px;
+      margin-bottom: 0;
+      border: 1px solid #cdcdcd;
+      border-bottom: none;
+      width: 100%;
+    }
+  }
+
+  .product-item__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product-item__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-item {
+    width: 245px;
+
+    &--short {
+      width: 895px;
+    }
+  }
 }

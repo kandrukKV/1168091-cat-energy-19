@@ -8,12 +8,18 @@
   background-size: cover;
 
   &--open {
-    width: 25px;
-    background-image: url("../../img/icon-mobile-menu.svg");
+    width: 19px;
+    background-image: url("../../img/icon-close.svg");
   }
 
   &--close {
-    width: 19px;
-    background-image: url("../../img/icon-close.svg");
+    width: 25px;
+    background-image: url("../../img/icon-mobile-menu.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .hamburger {
+    display: none;
   }
 }

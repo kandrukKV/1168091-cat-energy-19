@@ -1,29 +1,131 @@
 .program-selection {
-  padding-top: 30px;
-  background-image: url("../../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-}
-
-.program-selection__head {
-  padding: 0;
-  margin: 0 0 19px 0;
-  font-size: 36px;
-  line-height: 36px;
-  text-align: center;
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 22px;
   color: $text-color-w;
-}
-
-.program-selection__subheader {
-  padding: 0;
-  margin: 0 0 29px 0;
-  font-size: 14px;
-  line-height: 14px;
   text-align: center;
-  text-transform: uppercase;
-  color: $text-color-w;
 }
 
 .program-selection__wrap {
-  width: 280px;
-  margin: 0 auto;
+  @include centrator;
+}
+
+.program-selection__wrap-head {
+  padding-top: 29px;
+  min-height: 305px;
+  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 0;
+  background-color: #63a73a;
+}
+
+
+.program-selection__head {
+  @include centrator;
+  margin-bottom: 29px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.program-selection__subhead {
+  @include centrator;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.program-selection__button {
+  @include centrator;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.program-selection__wrap-img {
+  @include centrator;
+  margin-top: -130px;
+}
+
+@media (min-width: $tablet-width) {
+  .program-selection {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .program-selection__wrap {
+    @include centrator-clear;
+  }
+
+  .program-selection__wrap-head {
+    @include centrator;
+    min-height: auto;
+    background: none;
+  }
+
+  .program-selection__head {
+    @include centrator-clear;
+    margin-bottom: 33px;
+    font-size: 60px;
+    line-height: 60px;
+    color: $text-color-1;
+  }
+
+  .program-selection__subhead {
+    @include centrator-clear;
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 20px;
+    color: $text-color-1;
+  }
+
+  .program-selection__wrap-img {
+    margin-top: -80px;
+    text-align: center;
+  }
+
+  .program-selection__button {
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    width: 245px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-selection {
+    //@include centrator;
+    padding-right: 0;
+    margin-top: -73px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .program-selection__wrap-head {
+    @include centrator-clear;
+    width: 610px;
+    padding-top: 113px;
+    padding-bottom: 200px;
+  }
+
+  .program-selection__subhead {
+    margin-bottom: 53px;
+  }
+
+  .program-selection__wrap-img {
+    padding-top: 100px;
+    width: 50vw;
+    margin: 0;
+    background-image: url("../../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 0;
+    background-color: #63a73a;
+  }
+
+  .program-selection__button {
+    position: static;
+  }
 }

@@ -1,8 +1,37 @@
-@mixin titles($margin: 0 0 35px 20px, $padding: 0, $font-size: 36px, $font-weight: 400, $line-height: 60px) {
+@mixin centralizer($width: 280px, $padding: 0 20px, $margin: 0 auto) {
+  width: $width;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin centrator($margin: 0 auto, $padding: 0 20px, $width: 320px) {
+  margin: $margin;
+  padding: $padding;
+  width: $width;
+  //outline: 1px solid red;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+    width: 1300px;
+  }
+}
+
+@mixin centrator-clear($margin: 0, $padding:0, $width: auto) {
+  margin: $margin;
+  padding: $padding;
+  width: $width;
+}
+
+@mixin section-title($margin: 0, $padding: 0, $font-size: 36px, $line-height: 60px) {
   margin: $margin;
   padding: $padding;
   font-size: $font-size;
-  font-weight: $font-weight;
+  font-weight: 400;
   line-height: $line-height;
 }
 
@@ -12,9 +41,9 @@
   list-style-type: none;
 }
 
-@mixin text-desc($line-height: 18px, $text-align: left) {
+@mixin text-desc($font-size: 14px, $line-height: 18px, $text-align: left) {
   font-family: $second-font;
-  font-size: 14px;
+  font-size: $font-size;
   line-height: $line-height;
   color: $text-color-4;
   text-align: $text-align;

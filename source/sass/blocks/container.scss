@@ -1,5 +1,17 @@
 .container {
   width: 320px;
   margin: 0 auto;
-  border: 1px solid rgba($color: #000000, $alpha: 0.1);
+  border: 1px solid red;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: 1440px;
+  }
 }
