@@ -120,7 +120,7 @@
 
 .ps-form__comment {
   @include text-desc($line-height: 16px, $text-align: center);
-  margin: 23px 0 34px 0;
+  margin: 0;
 }
 
 .ps-form__input-textarea {
@@ -140,10 +140,6 @@
 
 .ps-form__bottom {
   margin-bottom: 23px;
-}
-
-.ps-form__comment {
-  margin: 0;
 }
 
 @media (min-width: $tablet-width) {
