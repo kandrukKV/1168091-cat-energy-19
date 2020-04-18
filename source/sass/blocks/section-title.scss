@@ -1,5 +1,6 @@
 .section-title {
   position: relative;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -8,6 +9,7 @@
   span {
     display: inline-block;
     padding: 0 20px;
+    margin-left: -20px;
     background-color: #ffffff;
   }
 
@@ -21,5 +23,17 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: $general-green;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .section-title {
+    margin-bottom: 70px;
+    font-size: 36px;
+    line-height: 36px;
+
+    br {
+      display: none;
+    }
   }
 }
