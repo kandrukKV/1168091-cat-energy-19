@@ -20,3 +20,15 @@ hamburger.addEventListener('click', function () {
   }
 
 });
+
+//==================  CatProgress =================
+
+var toggle = document.querySelector('.cat-progress__toggle');
+
+toggle.onmousedown = function (evt) {
+  // toggle.style.zIndex = 1000;
+  // toggle.style.left = evt.pageX - toggle.offsetWidth / 2 + 'px';
+
+  console.log(evt.pageX);
+  console.log(toggle.offsetWidth);
+};

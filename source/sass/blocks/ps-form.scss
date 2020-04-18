@@ -1,4 +1,5 @@
 .ps-form__message {
+  @include centrator;
   display: block;
   padding: 0 0 0 20px;
   margin-bottom: 20px;
@@ -10,7 +11,9 @@
 }
 
 .ps-form__item {
-  padding: 20px 20px 23px 20px;
+  @include centrator;
+  padding-top: 23px;
+  padding-bottom: 23px;
   border-bottom: 1px solid $general-gray;
 }
 
@@ -117,6 +120,10 @@
   color: $text-color-4;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.ps-form__bottom {
+  @include centrator;
 }
 
 @media (min-width: $tablet-width) {
