@@ -1,17 +1,32 @@
 .page-main__title {
   @include centrator;
   position: relative;
+  margin-bottom: 35px;
   font-size: 36px;
   font-weight: 400;
   line-height: 60px;
-  border-top: 1px solid #cdcdcd;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    background-color: #cdcdcd;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-main__title {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     font-size: 60px;
     margin-bottom: 40px;
+
+    &::before {
+      display: none;
+    }
   }
 }

@@ -34,17 +34,18 @@
 
     <form class="ps-form" action="https://echo.htmlacademy.ru" method="post">
 
-      <strong class="ps-form__message">Заполните анкету и мы подберем программу питания для вашего кота</strong>
+      <strong class="ps-form__message">Заполните анкету и мы подберем <br> программу питания для вашего кота</strong>
 
-        <div class="ps-form__item">
+      <div class="ps-form__item">
 
+        <div class="ps-form__item-inner">
           <p class="ps-form__input-wrap">
             <label class="ps-form__label" for="name">имя:*</label>
             <input class="ps-form__input-txt" id="name" name="cat-name" type="text" placeholder="барсик">
           </p>
 
           <p class="ps-form__input-wrap">
-            <label class="ps-form__label" for="weight">вес:*</label>
+            <label class="ps-form__label" for="weight">вес(кг):*</label>
             <input class="ps-form__input-txt" id="weight" name="cat-weight" type="text" placeholder="7">
           </p>
 
@@ -52,14 +53,13 @@
             <label class="ps-form__label" for="age">возраст (лет):</label>
             <input class="ps-form__input-txt" id="age" name="cat-age" type="text" placeholder="7">
           </p>
-
         </div>
 
-        <div class="ps-form__item">
+        <div class="ps-form__item-inner ps-form__item--radio">
 
           <p class="ps-form__radio-wrap">
             <label class="ps-form__radio-label" for="weight-down">
-              <input class="ps-form__input-radio" id="weight-down" name="weight-change" type="radio" value="похудение">
+              <input class="ps-form__input-radio" id="weight-down" name="weight-change" type="radio" value="похудение" checked>
               <span class="ps-form__radio-indicator"></span>
               похудение
             </label>
@@ -81,56 +81,39 @@
             </label>
           </p>
 
-
         </div>
 
-        <div class="section-title">
-          <div class="section-title__decor section-title__decor--left"></div>
-          <h2 class="section-title__value">Контактные данные (владельца кота)</h2>
-          <div class="section-title__decor section-title__decor--right"></div>
-        </div>
+      </div>
 
-        <div class="ps-form__item">
+      <h2 class="section-title"><span>Контактные данные <br> (владельца кота)</span></h2>
 
-          <p class="ps-form__input-wrap">
-            <label class="ps-form__label" for="email">e-mail:*</label>
-            <input class="ps-form__input-txt ps-form__input-txt--mail" id="email" name="cat-email" type="text" placeholder="kuklachev@gmail.com">
-          </p>
+      <div class="ps-form__item">
 
-          <p class="ps-form__input-wrap">
-            <label class="ps-form__label" for="phone">телефон:*</label>
-            <input class="ps-form__input-txt ps-form__input-txt--phone" id="phone" name="cat-phone" type="text" placeholder="8 (960) 900-60-90">
-          </p>
+        <p class="ps-form__input-wrap">
+          <label class="ps-form__label" for="email">e-mail:*</label>
+          <input class="ps-form__input-txt ps-form__input-txt--mail" id="email" name="cat-email" type="text" placeholder="kuklachev@gmail.com">
+        </p>
 
-        </div>
+        <p class="ps-form__input-wrap">
+          <label class="ps-form__label" for="phone">телефон:*</label>
+          <input class="ps-form__input-txt ps-form__input-txt--phone" id="phone" name="cat-phone" type="text" placeholder="8 (960) 900-60-90">
+        </p>
 
-        <div class="section-title">
+      </div>
 
-          <div class="section-title__decor section-title__decor--left"></div>
-          <h2 class="section-title__value">Комментарий</h2>
-          <div class="section-title__decor section-title__decor--right"></div>
+      <h2 class="section-title"><span>Комментарий</span></h2>
 
-        </div>
+      <div class="ps-form__item">
+        <textarea class="ps-form__input-textarea" name="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </div>
 
-        <div class="ps-form__item">
-
-          <p class="ps-form__input-wrap">
-            <textarea class="ps-form__input-textarea" name="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </p>
-
-        </div>
-
-        <div class="section-title">
-          <div class="section-title__decor section-title__decor--left"></div>
-          <h2 class="section-title__value">Дополнительно</h2>
-          <div class="section-title__decor section-title__decor--right"></div>
-        </div>
+      <h2 class="section-title"><span>Дополнительно</span></h2>
 
         <div class="ps-form__item ps-form__item--check">
 
           <p class="ps-form__check-wrap">
             <label class="ps-form__radio-label" for="sugar">
-              <input class="ps-form__input-check" id="sugar" name="cat-sugar" type="checkbox">
+              <input class="ps-form__input-check" id="sugar" name="cat-sugar" type="checkbox" checked>
               <span class="ps-form__check-indicator"></span>
               сахарозаменитель
             </label>
@@ -162,8 +145,8 @@
 
         </div>
 
-      <div class="ps-form__bottom">
-        <button class="button" type="submit">Отправить заявку</button>
+      <div class="ps-form__submit">
+        <button class="ps-form__bottom button" type="submit">Отправить заявку</button>
         <p class="ps-form__comment">* — Обязательные поля</p>
       </div>
 
@@ -171,7 +154,7 @@
 
     <section class="contacts">
 
-      <div class="contacts__header contacts__header--white">
+      <div class="contacts__header">
         <h2 class="contacts__head">приглашаем <br> к сотрудничеству <br> дилеров!</h2>
         <p class="contacts__value">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
       </div>

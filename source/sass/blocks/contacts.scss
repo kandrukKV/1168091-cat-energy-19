@@ -1,13 +1,17 @@
-.contacts__header {
-  @include centrator;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+.contacts {
   background-color: $general-gray;
 
   &--white {
     background-color: white;
   }
+}
+
+.contacts__header {
+  @include centrator;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contacts__head {
@@ -29,6 +33,7 @@
 }
 
 .contacts__map-img {
+  display: inline-block;
   width: 100%;
   height: 400px;
 }
@@ -65,5 +70,6 @@
     z-index: 5;
     top: 95px;
     left: 150px;
+    background-color: #ffffff;
   }
 }
