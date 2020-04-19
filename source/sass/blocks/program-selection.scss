@@ -48,6 +48,11 @@
   margin-top: -130px;
 }
 
+.program-selection__img {
+  width: 280px;
+  height: 271px;
+}
+
 @media (min-width: $tablet-width) {
   .program-selection {
     margin-bottom: 20px;
@@ -83,6 +88,11 @@
   .program-selection__wrap-img {
     margin-top: -80px;
     text-align: center;
+  }
+
+  .program-selection__img {
+    width: 709px;
+    height: 609px;
   }
 
   .program-selection__button {
@@ -123,6 +133,11 @@
     background-size: contain;
     background-position: 50% 0;
     background-color: #63a73a;
+  }
+
+  .program-selection__img {
+    width: 709px;
+    height: 609px;
   }
 
   .program-selection__button {

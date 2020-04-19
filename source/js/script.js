@@ -30,5 +30,5 @@ toggle.onmousedown = function (evt) {
   // toggle.style.left = evt.pageX - toggle.offsetWidth / 2 + 'px';
 
   console.log(evt.pageX);
-  console.log(toggle.offsetWidth);
+  console.log(getComputedStyle(toggle).left)
 };
