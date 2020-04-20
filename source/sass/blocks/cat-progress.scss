@@ -1,32 +1,46 @@
-.cat-progress {
-  @include centrator;
-  outline: 1px solid tomato;
-}
-
 .cat-progress__wrap-img {
-  text-align: center;
   position: relative;
+  margin: 0 auto;
+  width: 320px;
+  height: 232px;
 }
 
-.cat-progress__img-sm {
+.cat-progress__img-before {
   position: absolute;
   width: 100%;
+  height: 240px;
+  top: 0;
+  left: 0;
   z-index: 1;
   overflow-x: hidden;
+  background-color: #f3f3f3;
 }
 
-.cat-progress__img-sm img {
+.cat-progress__img-after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 240px;
+  z-index: 1;
+  overflow-x: hidden;
+  background-color: #f3f3f3;
+}
+
+.cat-progress__img-before img {
+  position: absolute;
   max-width: none;
+  top: 0;
+  left: 0;
   width: 320px;
   height: 240px;
 }
 
-.cat-progress__img-lg {
-  position: relative;
-  z-index: 0;
-}
-
-.cat-progress__img-lg img {
+.cat-progress__img-after img {
+  position: absolute;
+  max-width: none;
+  top: 0;
+  right: 0;
   width: 320px;
   height: 240px;
 }
@@ -38,7 +52,12 @@
   align-items: center;
 }
 
+.cat-progress__wrap-img {
+  margin-bottom: 13px;
+}
+
 .cat-progress__btn {
+  margin-left: 5px;
   font-family: $first-font;
   font-size: 16px;
   line-height: 20px;
@@ -69,21 +88,31 @@
 }
 
 @media (min-width: $tablet-width) {
-  .cat-progress {
-    padding: 0;
+  .cat-progress__wrap-img {
     width: 690px;
+    height: 317px;
   }
 
-  .cat-progress__img-sm {
+  .cat-progress__img-before {
+    top: -200px;
     width: 50%;
+    height: 517px;
+    background: none;
   }
 
-  .cat-progress__img-sm img {
+  .cat-progress__img-after {
+    top: -200px;
+    width: 50%;
+    height: 517px;
+    background: none;
+  }
+
+  .cat-progress__img-before img {
     width: 690px;
     height: 517px;
   }
 
-  .cat-progress__img-lg img {
+  .cat-progress__img-after img {
     width: 690px;
     height: 517px;
   }
@@ -91,7 +120,7 @@
   .cat-progress__btn {
     font-size: 20px;
     line-height: 20px;
-    background-color: #ffffff;
+    background-color: #f2f2f2;
   }
 
   .cat-progress__wrap-toggle {
@@ -129,14 +158,18 @@
   }
 }
 
-//@media (min-width: $desktop-width) {
-//  .cat-progress__img-sm img {
-//    width: 690px;
-//    height: 517px;
-//  }
-//
-//  .cat-progress__img-lg img {
-//    width: 690px;
-//    height: 517px;
-//  }
-//}
+@media (min-width: $desktop-width) {
+  .cat-progress {
+    background: none;
+  }
+
+  .cat-progress__img-sm img {
+    //width: 690px;
+    //height: 517px;
+  }
+
+  .cat-progress__img-lg img {
+    //width: 690px;
+    //height: 517px;
+  }
+}

@@ -3,7 +3,8 @@
 }
 
 .main-nav__list {
-  @include list-clear;
+  @include list-clear();
+  margin: 0 0 3px 0;
 }
 
 .main-nav__item {
@@ -17,7 +18,7 @@
 }
 
 .main-nav__item a {
-  padding: 24px 0;
+  padding: 22px 0;
   display: block;
   font-size: 20px;
   line-height: 20px;
@@ -68,7 +69,7 @@
         position: absolute;
         right: 0;
         left: 0;
-        bottom: 15px;
+        bottom: 13px;
         height: 2px;
         background-color: $general-green;
       }

@@ -1,20 +1,22 @@
 .living-example {
   background-color: $general-gray;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 17px;
 }
 
 .living-example__header {
-  @include centrator;
+  @include centrator($padding: 0 21px);
   margin-bottom: 35px;
 }
 
-.living-example__head {
-  @include section-title($margin: 0 0 33px 0);
+.living-example__title {
+  @include section-title();
+  @include centrator($margin: 0 auto 23px auto);
 }
 
 .living-example__desc {
   @include text-desc();
-  margin: 0 0 27px 0;
+  margin: 0 0 25px 0;
 }
 
 .living-example__wrap {
@@ -27,16 +29,18 @@
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
+  margin-bottom: 19px;
 }
 
 .living-example__value {
   margin: 0;
-  padding: 17px 0 18px 0;
+  padding: 13px 0 18px 0;
   width: 124px;
   color: $text-color-1;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  text-transform: uppercase;
   text-align: center;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
@@ -45,8 +49,7 @@
 .living-example__name {
   @include text-desc($font-size: 12px, $line-height: 12px, $text-align: center);
   margin: 0 auto;
-  margin-top: -8px;
-  margin-bottom: 25px;
+  margin-top: -10px;
 }
 
 .living-example__name span {
@@ -65,18 +68,29 @@
 }
 
 @media (min-width: $tablet-width) {
+  .cat-progress {
+    background-color: #f2f2f2;
+  }
+
   .living-example {
-    padding: 0 30px;
+    padding-top: 0;
     background-color: #ffffff;
   }
 
-  .living-example__head {
-    @include section-title($margin: 0 0 60px 0, $font-size: 60px, $line-height: 60px);
+  .living-example__title {
+    @include section-title($margin: 0 auto 0 auto, $font-size: 60px, $line-height: 60px);
+    margin-bottom: 60px;
+  }
+
+  .living-example__header {
+    margin-bottom: 203px;
   }
 
   .living-example__desc {
     @include text-desc($font-size: 16px, $line-height: 24px);
-    margin-bottom: 56px;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin-bottom: 51px;
   }
 
   .living-example__wrap-param {
@@ -113,6 +127,7 @@
   }
 
   .living-example__expenses {
+    padding-top: 12px;
     flex-grow: 0;
     width: 175px;
     font-size: 20px;
@@ -123,14 +138,31 @@
 
 @media (min-width: $desktop-width) {
   .living-example {
-    @include centrator;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 75px;
   }
 
   .living-example__header {
-    @include centrator-clear;
-    width: 50%;
+    @include centrator-clear($padding: 76px 0 0 0);
+    width: 435px;
+  }
+
+  .living-example__content {
+    background-color: #f2f2f2;
+    flex-grow: 1;
+  }
+
+  .living-example__wrapper {
+    @include centrator;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .living-example__name span {
+    display: inline-block;
+    padding: 0 8px;
+    background-color: #f2f2f2;
   }
 
   .living-example__expenses {

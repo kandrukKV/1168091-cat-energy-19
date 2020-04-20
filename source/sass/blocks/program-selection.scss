@@ -1,7 +1,7 @@
 .program-selection {
   position: relative;
   padding-bottom: 40px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   color: $text-color-w;
   text-align: center;
 }
@@ -11,7 +11,7 @@
 }
 
 .program-selection__wrap-head {
-  padding-top: 29px;
+  padding-top: 26px;
   min-height: 305px;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -23,7 +23,7 @@
 
 .program-selection__head {
   @include centrator;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -45,7 +45,7 @@
 
 .program-selection__wrap-img {
   @include centrator;
-  margin-top: -130px;
+  margin-top: -139px;
 }
 
 .program-selection__img {
@@ -55,7 +55,7 @@
 
 @media (min-width: $tablet-width) {
   .program-selection {
-    margin-bottom: 20px;
+    margin-bottom: -45px;
     text-align: left;
   }
 
@@ -65,13 +65,17 @@
 
   .program-selection__wrap-head {
     @include centrator;
+    //padding-left: 117px;
+    //padding-top: 48px;
     min-height: auto;
     background: none;
   }
 
   .program-selection__head {
     @include centrator-clear;
-    margin-bottom: 33px;
+    padding-left: 87px;
+    padding-top: 48px;
+    margin-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
     color: $text-color-1;
@@ -79,6 +83,7 @@
 
   .program-selection__subhead {
     @include centrator-clear;
+    padding-left: 87px;
     margin-bottom: 48px;
     font-size: 20px;
     line-height: 20px;
@@ -97,6 +102,7 @@
 
   .program-selection__button {
     position: relative;
+    left: 89px;
     z-index: 3;
     margin: 0;
     padding: 0;
