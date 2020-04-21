@@ -94,14 +94,14 @@
   }
 
   .cat-progress__img-before {
-    top: -200px;
+    top: -170px;
     width: 50%;
     height: 517px;
     background: none;
   }
 
   .cat-progress__img-after {
-    top: -200px;
+    top: -170px;
     width: 50%;
     height: 517px;
     background: none;
@@ -110,11 +110,17 @@
   .cat-progress__img-before img {
     width: 690px;
     height: 517px;
+    left: 7px;
   }
 
   .cat-progress__img-after img {
     width: 690px;
     height: 517px;
+    right: -7px;
+  }
+
+  .cat-progress__wrap {
+    padding-top: 36px;
   }
 
   .cat-progress__btn {

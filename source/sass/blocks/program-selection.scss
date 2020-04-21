@@ -64,9 +64,9 @@
   }
 
   .program-selection__wrap-head {
-    @include centrator;
-    //padding-left: 117px;
-    //padding-top: 48px;
+    //@include centrator;
+    padding-left: 114px;
+    padding-top: 0;
     min-height: auto;
     background: none;
   }
@@ -112,7 +112,7 @@
 
 @media (min-width: $desktop-width) {
   .program-selection {
-    //@include centrator;
+    @include centrator;
     padding-right: 0;
     margin-top: -73px;
     display: flex;
