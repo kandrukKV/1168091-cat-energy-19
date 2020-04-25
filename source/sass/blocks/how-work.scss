@@ -124,3 +124,18 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .how-work {
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .how-work__item {
+    margin-right: 0;
+    margin-bottom: 124px;
+  }
+}

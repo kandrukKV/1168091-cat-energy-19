@@ -1,10 +1,11 @@
-.ps-form {
-  @include centrator;
+.ps-form__head {
+  margin-bottom: 25px;
 }
 
 .ps-form__message {
+  @include centrator;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 39px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -12,40 +13,29 @@
   color: $text-color-2;
 }
 
-.ps-form__item-inner {
-  position: relative;
-  padding-top: 29px;
-  padding-bottom: 23px;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100vw;
-    height: 1px;
-    background-color: $general-gray;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-  }
+.ps-form__name {
+  @include centrator;
+  margin-bottom: 22px;
 }
 
 .ps-form__label {
+  color: $text-color-2;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
 .ps-form__input-wrap {
-  margin: 0 0 15px 0;
-  margin-bottom: 25px;
+  margin: 0 0 13px 0;
   display: flex;
   align-items: center;
 }
 
 .ps-form__input-txt {
+  width: 100px;
   flex-grow: 1;
-  padding: 15px;
-  margin-left: 15px;
+  padding: 12px 15px;
+  margin-left: 12px;
   font-family: $first-font;
   font-size: 16px;
   line-height: 18px;
@@ -54,7 +44,20 @@
   color: $text-color-4;
 }
 
-.ps-form__radio-wrap {
+.ps-form__radio {
+  padding-top: 10px;
+  margin-bottom: 27px;
+  border: 1px solid #ededed;
+}
+
+.ps-form__radio-list {
+  @include list-clear;
+  @include centrator;
+  padding-top: 15px;
+  padding-bottom: 3px;
+}
+
+.ps-form__radio-item {
   margin: 0 0 25px 0;
   display: flex;
   align-items: center;
@@ -63,7 +66,7 @@
 .ps-form__input-radio {
   display: none;
 
-  &:checked + .ps-form__radio-indicator::after {
+  &:checked + .ps-form__radio-label::after {
     display: block;
   }
 }
@@ -74,24 +77,24 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-}
 
-.ps-form__radio-indicator {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -4px;
-  left: 0;
-  border: solid 1px #cdcdcd;
-  border-radius: 50%;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: -5px;
+    left: 0;
+    border: solid 1px #cdcdcd;
+    border-radius: 50%;
+  }
 
   &::after {
     display: none;
     position: absolute;
     content: "";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 4px;
+    left: 9px;
     border-radius: 50%;
     width: 12px;
     height: 12px;
@@ -99,31 +102,22 @@
   }
 }
 
-.ps-form__input-check {
-  display: none;
-
-  &:checked + .ps-form__check-indicator {
-    background-image: url("../../img/icon-tick.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.ps-form__title {
+  margin-bottom: 34px;
 }
 
-.ps-form__check-indicator {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -4px;
-  left: 0;
-  border: solid 1px #cdcdcd;
+.ps-form__contacts {
+  @include centrator;
+  margin-bottom: 27px;
 }
 
-.ps-form__comment {
-  @include text-desc($line-height: 16px, $text-align: center);
-  margin: 0;
+.ps-form__comments {
+  @include centrator;
+  margin-bottom: 24px;
 }
 
 .ps-form__input-textarea {
+  padding: 13px;
   resize: none;
   width: 100%;
   height: 150px;
@@ -134,51 +128,80 @@
   text-transform: uppercase;
 }
 
+.ps-form__addition {
+  @include centrator;
+  margin-bottom: 37px;
+}
+
+.ps-form__addition-list {
+  @include list-clear;
+  padding-top: 8px;
+}
+
+.ps-form__addition-item {
+  margin-bottom: 18px;
+}
+
+.ps-form__input-check {
+  display: none;
+
+  &:checked + .ps-form__check-label::before {
+    background-image: url("../../img/icon-tick.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.ps-form__check-label {
+  position: relative;
+  padding-left: 45px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: -2px;
+    left: 0;
+    border: solid 1px #cdcdcd;
+    background-image: none;
+  }
+}
+
+.ps-form__comment {
+  @include text-desc($line-height: 16px, $text-align: center);
+  margin: 0;
+}
+
 .ps-form__submit {
-  padding: 30px 0;
+  @include centrator;
+  margin-bottom: 32px;
 }
 
 .ps-form__bottom {
-  margin-bottom: 23px;
+  padding: 11px 0 12px 0;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 19px;
 }
 
 @media (min-width: $tablet-width) {
   .ps-form {
-    padding-left: 70px;
-    padding-right: 70px;
+    margin-bottom: 53px;
+  }
+
+  .ps-form__head {
+    margin-bottom: 46px;
   }
 
   .ps-form__message {
-    margin-bottom: 40px;
+    margin-bottom: 64px;
+    padding-left: 70px;
     font-size: 20px;
     line-height: 30px;
-  }
-
-  .ps-form__item {
-    margin-bottom: 70px;
-    border: none;
-  }
-
-  .ps-form__item-inner {
-    margin-bottom: 40px;
-
-    &::after {
-      display: none;
-    }
-
-    &--radio {
-      padding: 33px 28px 8px 28px;
-      border: 1px solid #cdcdcd;
-    }
-  }
-
-  .ps-form__item--check {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .ps-form__check-wrap {
-    width: 250px;
   }
 
   .ps-form__label {
@@ -186,74 +209,183 @@
     line-height: 20px;
   }
 
-  .ps-form__radio-label {
+  .ps-form__item {
+    margin: 0 auto;
+    width: 768px;
+    margin-bottom: 75px;
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+
+  .ps-form__name {
+    @include centrator-clear;
+    margin-bottom: 73px;
+  }
+
+  .ps-form__input-wrap {
+    margin-bottom: 20px;
+  }
+
+  .ps-form__input-txt {
+    padding: 9px 22px;
     font-size: 20px;
     line-height: 20px;
   }
 
+  .ps-form__radio {
+    @include centrator-clear($padding: 33px 0 2px 12px);
+  }
+
+  .ps-form__radio-item {
+    margin-bottom: 33px;
+  }
+
+  .ps-form__radio-label {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      top: -9px;
+      left: -14px;
+      border: solid 1px #cdcdcd;
+      border-radius: 50%;
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      top: 2px;
+      left: -3px;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      background-color: $general-green;
+    }
+  }
+
+  .ps-form__title {
+    margin-bottom: 75px;
+    margin-left: -40px;
+  }
+
+  .ps-form__title span {
+    margin-left: 0;
+  }
+
+  .ps-form__contacts {
+    padding-left: 70px;
+    padding-right: 65px;
+    margin-bottom: 66px;
+  }
+
   .ps-form__input-textarea {
+    padding: 11px 19px;
     height: 175px;
     font-size: 20px;
     line-height: 30px;
   }
 
+  .ps-form__comments {
+    padding-left: 70px;
+    padding-right: 65px;
+    margin-bottom: 60px;
+  }
+
+  .ps-form__addition {
+    padding-left: 70px;
+    padding-right: 65px;
+    margin-bottom: 12px;
+  }
+
+  .ps-form__addition-title {
+    margin-bottom: 59px;
+    margin-left: -20px;
+  }
+
+  .ps-form__addition-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .ps-form__addition-item {
+    width: 289px;
+    margin-bottom: 48px;
+  }
+
+  .ps-form__check-label {
+    padding-left: 58px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      top: -5px;
+      left: 0;
+    }
+  }
+
   .ps-form__submit {
-    margin-bottom: 70px;
-    padding: 0;
+    padding-left: 70px;
+    padding-right: 65px;
     display: flex;
     align-items: center;
   }
 
   .ps-form__bottom {
+    padding: 15px 0 18px 0;
     width: 283px;
-    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .ps-form__comment {
-    margin: 0 0 0 60px;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 0 0 62px;
+    padding-bottom: 23px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .ps-form {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
   .ps-form__message {
-    padding-left: 0;
-  }
-
-  .ps-form__item-inner {
-    width: 570px;
-    margin: 0;
-    padding: 0;
-
-    & .ps-form__input-wrap:last-child {
-      margin-bottom: 0;
-    }
+    padding-left: 40px;
   }
 
   .ps-form__item {
-    margin-bottom: 70px;
-    padding-left: 0;
-    padding-right: 0;
+    margin-bottom: 69px;
     display: flex;
     justify-content: space-between;
-    border: none;
-
-    &--radio {
-      padding: 33px 28px 8px 28px;
-      margin: 0;
-      border: 1px solid #cdcdcd;
-    }
+    flex-wrap: wrap;
+    width: 1300px;
+    padding: 0 40px;
   }
 
-  .ps-form__input-wrap {
+  .ps-form__input-wrap:last-child {
+    margin-bottom: 0;
+  }
+
+  .ps-form__name {
+    margin-bottom: 0;
     width: 570px;
   }
 
-  .ps-form__bottom {
-    width: 568px;
+  .ps-form__radio {
+    padding: 34px 0 2px 41px;
+    width: 570px;
+  }
+
+  .ps-form__radio-list {
+    @include centrator-clear;
+  }
+
+  .ps-form__title {
+    margin-left: -70px;
   }
 }

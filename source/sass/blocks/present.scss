@@ -1,16 +1,20 @@
 .present {
   @include centrator;
+  position: relative;
+  margin-bottom: 35px;
   background-color: #63a73a;
   background-clip: content-box;
 }
 
 .present__title {
   position: relative;
+  z-index: 3;
   display: block;
-  width: 150px;
+  width: 180px;
+  min-height: 289px;
   margin: 0 auto;
-  margin-top: -100px;
-  margin-bottom: 30px;
+  padding-top: 188px;
+  padding-bottom: 41px;
   text-align: center;
   font-family: $second-font;
   font-size: 16px;
@@ -19,8 +23,9 @@
 
   &::before {
     position: absolute;
+    z-index: 3;
     content: "";
-    top: -130px;
+    top: 64px;
     left: 50%;
     width: 56px;
     height: 61px;
@@ -29,14 +34,44 @@
   }
 }
 
+.present__img-wrap {
+  position: absolute;
+}
+
+.present__img {
+  display: block;
+}
+
 @media (min-width: $tablet-width) {
   .present {
     @include centrator-clear($padding: 0, $width: 100%);
+  }
+
+  .present__title {
+    margin: 0 0 0 424px;
+    padding: 73px 0 67px 0;
+    text-align: left;
+    min-height: 200px;
+
+    &::before {
+      left: -306px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .present {
     width: 245px;
+  }
+
+  .present__title {
+    margin: 0 auto;
+    padding: 188px 0 41px 0;
+    text-align: center;
+
+    &::before {
+      top: 65px;
+      left: 90px;
+    }
   }
 }

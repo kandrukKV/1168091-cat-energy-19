@@ -84,7 +84,13 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav__list {
+    margin: 0;
+  }
+
   .main-nav__item {
+    margin-left: 34px;
+
     &--w {
       &.main-nav__item {
         &--active {

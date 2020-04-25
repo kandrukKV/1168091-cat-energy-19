@@ -20,12 +20,6 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
-  &--ps {
-    padding: 16px 0 16px 0;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
   &--gray {
     background-color: $general-gray;
     color: $text-color-4;
@@ -36,7 +30,12 @@
   }
 }
 
-//@media (min-width: $tablet-width) {
-//  .button {
-//  }
-//}
+@media (min-width: $tablet-width) {
+  .button {
+    &--ps {
+      padding: 16px 0 16px 0;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}

@@ -121,6 +121,7 @@
 
   .cat-progress__wrap {
     padding-top: 36px;
+    padding-bottom: 74px;
   }
 
   .cat-progress__btn {
@@ -169,13 +170,23 @@
     background: none;
   }
 
-  .cat-progress__img-sm img {
-    //width: 690px;
-    //height: 517px;
+  .cat-progress__wrap-img {
+    width: 650px;
   }
 
-  .cat-progress__img-lg img {
-    //width: 690px;
-    //height: 517px;
+  .cat-progress__img-before {
+    top: -190px;
+  }
+
+  .cat-progress__img-before img {
+    left: -40px;
+  }
+
+  .cat-progress__img-after {
+    top: -190px;
+  }
+
+  .cat-progress__img-after img {
+    right: 0;
   }
 }
