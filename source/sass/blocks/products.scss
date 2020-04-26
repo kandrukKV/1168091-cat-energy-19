@@ -38,12 +38,6 @@
     }
   }
 
-  .products__item {
-    &:first-child {
-      border-top: none;
-    }
-  }
-
   .products__title {
     padding: 0 48px;
     margin-bottom: 80px;
@@ -63,6 +57,10 @@
 
   .products__item {
     border: none;
+
+    &:first-child {
+      border-top: none;
+    }
 
     &--short:first-child .product-item--short {
       border-top: 1px solid #cdcdcd;

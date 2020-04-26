@@ -1,6 +1,7 @@
 .cat-progress__wrap-img {
   position: relative;
   margin: 0 auto;
+  margin-bottom: 13px;
   width: 320px;
   height: 232px;
 }
@@ -50,10 +51,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.cat-progress__wrap-img {
-  margin-bottom: 13px;
 }
 
 .cat-progress__btn {

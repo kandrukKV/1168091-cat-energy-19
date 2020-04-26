@@ -386,6 +386,53 @@
   }
 
   .ps-form__title {
-    margin-left: -70px;
+    margin-left: -40px;
+  }
+
+  .ps-form__contacts {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 68px;
+  }
+
+  .ps-form__contacts-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    .ps-form__input-wrap {
+      margin: 0;
+      width: 570px;
+    }
+  }
+
+  .ps-form__comments {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 62px;
+  }
+
+  .ps-form__addition {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 19px;
+  }
+
+  .ps-form__addition-item {
+    width: 245px;
+  }
+
+  .ps-form__submit {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 78px;
+  }
+
+  .ps-form__bottom {
+    width: 571px;
+    margin-bottom: 0;
+  }
+
+  .ps-form__comment {
+    margin: 17px 0 0 80px;
   }
 }
