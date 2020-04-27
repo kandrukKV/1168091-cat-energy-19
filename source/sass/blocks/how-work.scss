@@ -1,9 +1,11 @@
 .how-work {
-  @include centrator;
+  @include centrator($margin: 0 auto 46px auto);
 }
 
 .how-work__head {
-  @include section-title($margin: 0 0 40px 0);
+  @include section-title;
+  margin-top: -3px;
+  margin-bottom: 30px;
 }
 
 .how-work__list {
@@ -15,12 +17,12 @@
   min-height: 54px;
   position: relative;
   padding-left: 80px;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
 
   &::before {
     position: absolute;
     content: "";
-    top: -6px;
+    top: -2px;
     left: 0;
     width: 60px;
     height: 60px;
@@ -61,11 +63,31 @@
 }
 
 @media (min-width: $tablet-width) {
+  .how-work {
+    position: relative;
+    margin-bottom: 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      background-color: $general-gray;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
   .how-work__head {
-    @include section-title($margin: 0 0 63px 0, $font-size: 60px, $line-height: 60px);
+    @include section-title($font-size: 60px, $line-height: 60px);
+    padding-top: 15px;
+    margin-bottom: 72px;
   }
 
   .how-work__list {
+    list-style: decimal;
+    counter-reset: myCounter;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -73,17 +95,47 @@
 
   .how-work__item {
     @include text-desc($font-size: 16px, $line-height: 24px);
+    list-style: none;
     position: relative;
     padding-left: 0;
-    padding-top: 117px;
-    margin-bottom: 40px;
-    width: 300px;
+    padding-top: 114px;
+    margin-bottom: 130px;
+    margin-right: 75px;
+    max-width: 250px;
 
     &::before {
-      top: -6px;
+      top: 0;
       left: 0;
       width: 80px;
       height: 80px;
     }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      top: 90px;
+      right: 0;
+      font-family: $first-font;
+      color: #f2f2f2;
+      height: 281px;
+      font-size: 281px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .how-work {
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .how-work__item {
+    margin-right: 0;
+    margin-bottom: 124px;
   }
 }

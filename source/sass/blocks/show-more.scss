@@ -1,18 +1,22 @@
 .show-more {
   @include centrator;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .show-more__plus {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   text-align: center;
+  opacity: 0.2;
+}
+
+.show-more__plus svg {
+  opacity: 0.2;
 }
 
 .show-more__title {
   padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 0 8px 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -22,20 +26,48 @@
 }
 
 .show-more__desc {
-  @include text-desc($line-height: 16px, $text-align: center);
+  @include text-desc($font-size:12px, $line-height: 16px, $text-align: center);
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 
 @media (min-width: $tablet-width) {
   .show-more {
-    @include centrator-clear($margin: 0 0 70px 0, $padding: 165px 40px 40px 40px, $width: 320px);
+    @include centrator-clear($margin: 0 0 70px 0, $padding: 54px 40px 40px 40px, $width: 324px);
     border: 1px solid #cdcdcd;
+  }
+
+  .show-more__plus {
+    margin-bottom: 43px;
+  }
+
+  .show-more__plus img {
+    width: 61px;
+    height: 61px;
+  }
+
+  .show-more__title {
+    margin: 0 auto;
+    margin-bottom: 28px;
+    width: 150px;
+    font-size: 20px;
+  }
+
+  .show-more__desc {
+    margin: 0 auto;
+    margin-bottom: 84px;
+    width: 225px;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .show-more {
     width: 245px;
+  }
+
+  .show-more__desc {
+    width: 170px;
   }
 }

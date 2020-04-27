@@ -19,7 +19,7 @@
     content: "";
     width: 100vw;
     height: 3px;
-    top: 50%;
+    top: calc(50% + 2px);
     left: 50%;
     transform: translateX(-50%);
     background-color: $general-green;
@@ -31,6 +31,14 @@
     margin-bottom: 70px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      top: calc(50% + 4px);
+    }
+
+    span {
+      padding: 0 39px;
+    }
 
     br {
       display: none;

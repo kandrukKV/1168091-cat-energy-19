@@ -1,17 +1,13 @@
 .program-selection {
   position: relative;
   padding-bottom: 40px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   color: $text-color-w;
   text-align: center;
 }
 
-.program-selection__wrap {
-  @include centrator;
-}
-
 .program-selection__wrap-head {
-  padding-top: 29px;
+  padding-top: 26px;
   min-height: 305px;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -23,7 +19,7 @@
 
 .program-selection__head {
   @include centrator;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -43,30 +39,38 @@
   bottom: 0;
 }
 
-.program-selection__wrap-img {
+.program-selection__product-img {
   @include centrator;
-  margin-top: -130px;
+  margin-top: -139px;
+  margin-bottom: 5px;
+}
+
+.program-selection__img {
+  width: 280px;
+  height: 271px;
+}
+
+.program-selection__img img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: $tablet-width) {
   .program-selection {
-    margin-bottom: 20px;
+    @include centrator;
     text-align: left;
   }
 
-  .program-selection__wrap {
-    @include centrator-clear;
-  }
-
   .program-selection__wrap-head {
-    @include centrator;
+    padding-left: 87px;
+    padding-top: 48px;
     min-height: auto;
     background: none;
   }
 
   .program-selection__head {
     @include centrator-clear;
-    margin-bottom: 33px;
+    margin-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
     color: $text-color-1;
@@ -80,9 +84,15 @@
     color: $text-color-1;
   }
 
-  .program-selection__wrap-img {
+  .program-selection__product-img {
+    @include centrator-clear;
     margin-top: -80px;
     text-align: center;
+  }
+
+  .program-selection__img {
+    width: 709px;
+    height: 609px;
   }
 
   .program-selection__button {
@@ -96,17 +106,23 @@
 
 @media (min-width: $desktop-width) {
   .program-selection {
-    //@include centrator;
-    padding-right: 0;
-    margin-top: -73px;
+    @include centrator-clear($margin: -120px 0 68px 0);
     display: flex;
     justify-content: flex-end;
+  }
+
+  .program-selection__img {
+    width: 552px;
+    height: 499px;
+    margin-left: -160px;
+    margin-top: 43px;
   }
 
   .program-selection__wrap-head {
     @include centrator-clear;
     width: 610px;
-    padding-top: 113px;
+    padding-left: 80px;
+    padding-top: 223px;
     padding-bottom: 200px;
   }
 
@@ -114,7 +130,7 @@
     margin-bottom: 53px;
   }
 
-  .program-selection__wrap-img {
+  .program-selection__product-img {
     padding-top: 100px;
     width: 50vw;
     margin: 0;
@@ -127,5 +143,6 @@
 
   .program-selection__button {
     position: static;
+    width: 245px;
   }
 }

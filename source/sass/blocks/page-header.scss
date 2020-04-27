@@ -8,16 +8,23 @@
 
 .page-header__logo {
   @include centrator();
-  padding-top: 11px;
+  padding-top: 10px;
   padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.page-header__logo-img {
+  width: 191px;
+  height: 39px;
+}
+
 @media (min-width: $tablet-width) {
   .page-header {
-    @include centrator();
+    margin: 0 auto;
+    width: 768px;
+    padding: 20px 30px 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,11 +35,23 @@
     margin: 0;
     padding: 0;
   }
+
+  .page-header__logo-img {
+    width: 174px;
+    height: 59px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
+    width: 1300px;
+    padding: 52px 40px 0 40px;
     position: relative;
     z-index: 5;
+  }
+
+  .page-header__logo-img {
+    width: 203px;
+    height: 60px;
   }
 }

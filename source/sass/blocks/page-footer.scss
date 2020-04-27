@@ -1,12 +1,16 @@
 .page-footer {
+  background-color: $general-gray;
+}
+
+.page-footer__wrap {
   @include centrator;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 20px;
 }
 
 .page-footer__logo {
   position: relative;
-  padding: 20px 0 30px 0;
+  padding: 20px 0 22px 0;
   text-align: center;
 
   &::after {
@@ -23,9 +27,9 @@
 .page-footer__social-list {
   position: relative;
   margin: 0;
-  padding: 22px 0 22px 0;
+  padding: 22px 63px 15px 53px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   list-style-type: none;
 
   &::after {
@@ -40,23 +44,45 @@
 }
 
 .page-footer__social-item {
-  padding: 0 20px 0 20px;
+  svg {
+    fill: #666666;
+  }
+
+  &--vk svg {
+    width: 22px;
+    height: 18px;
+  }
+
+  &--inst svg {
+    width: 16px;
+    height: 21px;
+  }
+
+  &--fb svg {
+    width: 10px;
+    height: 19px;
+  }
 }
 
 .page-footer__made {
+  @include list-clear;
+  padding-top: 22px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .page-footer__made-title {
   margin: 0;
-  padding: 0;
+  padding-top: 2px;
 }
 
 .page-footer__made-logo {
   margin: 0;
   padding: 0;
+}
+
+.page-footer__made-logo path {
+  fill: #666666;
 }
 
 .page-footer__made-link {
@@ -68,21 +94,56 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-footer {
-    @include centrator;
+  .page-footer__wrap {
+    padding-top: 57px;
+    padding-bottom: 49px;
     display: flex;
     justify-content: space-between;
   }
 
   .page-footer__logo {
+    padding: 0;
+
     &::after {
       display: none;
     }
   }
 
   .page-footer__social-list {
+    width: 143px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 0 5px 0;
+
     &::after {
       display: none;
     }
+  }
+
+  .page-footer__social-item {
+    &--vk svg {
+      margin-left: 18px;
+      width: 30px;
+      height: 16px;
+    }
+
+    &--inst svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb svg {
+      width: 14px;
+      height: 28px;
+    }
+  }
+
+  .page-footer__made {
+    padding: 0;
+  }
+
+  .page-footer__made-logo {
+    margin-left: 22px;
   }
 }
