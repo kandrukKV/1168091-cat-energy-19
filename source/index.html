@@ -184,17 +184,24 @@
 
         </div>
 
-
       </section>
 
       <section class="contacts contacts--white">
 
-        <div class="contacts__header">
+        <div class="contacts__header-wrap">
+          <div class="contacts__header">
           <h2 class="contacts__head">приглашаем <br> к сотрудничеству <br> дилеров!</h2>
-          <p class="contacts__value">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
+          <div class="contacts__header-address">
+            <p class="contacts__value">ул. Большая <br> Конюшенная, д. 19/8</p>
+            <p class="contacts__city">Санкт-Петербург</p>
+          </div>
+
+
+          </div>
         </div>
 
         <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9e45567147de2c7eeb05b286ff4514483d47f387938e6c20223e4c04a1616e13&amp;source=constructor"></iframe>
           <div class="contacts__wrap-img">
             <picture>
               <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
@@ -202,7 +209,13 @@
               <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" alt="" width="320" height="362">
             </picture>
           </div>
+
+          <div class="contacts__pin">
+            <img src="img/map-pin.png" alt="pin" width="124" height="106">
+          </div>
         </div>
+
+
 
       </section>
 

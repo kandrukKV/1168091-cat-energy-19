@@ -10,7 +10,7 @@
 
 .page-footer__logo {
   position: relative;
-  padding: 20px 0 22px 0;
+  padding: 26px 0 27px 0;
   text-align: center;
 
   &::after {
@@ -21,6 +21,16 @@
     width: 100%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.page-footer__logo-img {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -46,6 +56,16 @@
 .page-footer__social-item {
   svg {
     fill: #666666;
+  }
+
+  &:hover {
+    svg {
+      fill: $general-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   &--vk svg {
@@ -79,10 +99,20 @@
 .page-footer__made-logo {
   margin: 0;
   padding: 0;
-}
 
-.page-footer__made-logo path {
-  fill: #666666;
+  svg {
+    fill: #666666;
+  }
+
+  &:hover {
+    svg {
+      fill: $general-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__made-link {
@@ -91,18 +121,22 @@
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__wrap {
-    padding-top: 57px;
+    padding-top: 56px;
     padding-bottom: 49px;
     display: flex;
     justify-content: space-between;
   }
 
   .page-footer__logo {
-    padding: 0;
+    padding: 6px 0 0 0;
 
     &::after {
       display: none;
@@ -145,5 +179,11 @@
 
   .page-footer__made-logo {
     margin-left: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrap {
+    padding-top: 58px;
   }
 }

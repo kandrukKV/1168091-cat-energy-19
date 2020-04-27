@@ -221,4 +221,12 @@
   .program-example__item:nth-child(2) .program-example__desc {
     width: 460px;
   }
+
+  .program-example__link {
+    &:hover {
+      &::after {
+        width: 34px;
+      }
+    }
+  }
 }

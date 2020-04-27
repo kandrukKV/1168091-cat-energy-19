@@ -62,6 +62,7 @@
   color: $text-color-1;
   border: none;
   background-color: $general-gray;
+  cursor: pointer;
 }
 
 .cat-progress__wrap-toggle {
@@ -118,16 +119,20 @@
 
   .cat-progress__wrap {
     padding-top: 36px;
-    padding-bottom: 74px;
+    padding-bottom: 70px;
   }
 
   .cat-progress__btn {
+    margin-left: 0;
+    padding: 0 0 5px 0;
     font-size: 20px;
     line-height: 20px;
     background-color: #f2f2f2;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
   }
 
   .cat-progress__wrap-toggle {
+    margin: 0 23px;
     border: none;
     background-color: #cdcdcd;
     border-radius: 2.5px;
@@ -163,6 +168,27 @@
 }
 
 @media (min-width: $desktop-width) {
+  .cat-progress__btn {
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+
+  .cat-progress__toggle {
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: solid 2px $general-green;
+    }
+  }
+
   .cat-progress {
     background: none;
   }

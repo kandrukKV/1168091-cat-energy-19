@@ -34,7 +34,7 @@
 .ps-form__input-txt {
   width: 100px;
   flex-grow: 1;
-  padding: 12px 15px;
+  padding: 14px 15px;
   margin-left: 12px;
   font-family: $first-font;
   font-size: 16px;
@@ -42,7 +42,27 @@
   text-transform: uppercase;
   font-weight: 400;
   color: $text-color-4;
+  border: none;
+  outline: 1px solid rgba(205, 205, 205, 0.5);
+
+  &:hover {
+    outline: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+  }
+
+  &--error {
+    outline: 2px solid #ff8282;
+  }
 }
+
+//.ps-form__input-txt--mail {
+//  background-image: url("../../img/icon-mail.svg");
+//  background-position: center right;
+//  background-repeat: no-repeat;
+//}
 
 .ps-form__radio {
   padding-top: 10px;
@@ -100,6 +120,16 @@
     height: 12px;
     background-color: $general-green;
   }
+
+  &:hover {
+    &::before {
+      border: solid 1px #bababa;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .ps-form__title {
@@ -126,6 +156,16 @@
   color: $text-color-4;
   line-height: 18px;
   text-transform: uppercase;
+  border: none;
+  outline: 1px solid rgba(205, 205, 205, 0.5);
+
+  &:hover {
+    outline: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+  }
 }
 
 .ps-form__addition {
@@ -168,6 +208,16 @@
     left: 0;
     border: solid 1px #cdcdcd;
     background-image: none;
+  }
+
+  &:hover {
+    &::before {
+      border-color: #bababa;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -227,7 +277,7 @@
   }
 
   .ps-form__input-txt {
-    padding: 9px 22px;
+    padding: 11px 22px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -354,6 +404,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .ps-form {
+    margin-bottom: 173px;
+  }
+
   .ps-form__message {
     padding-left: 40px;
   }
