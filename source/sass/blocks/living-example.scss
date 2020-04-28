@@ -84,6 +84,7 @@
 
   .living-example {
     padding-top: 0;
+    padding-bottom: 0;
     background-color: #ffffff;
   }
 
@@ -158,6 +159,7 @@
 
 @media (min-width: $desktop-width) {
   .living-example {
+    margin-bottom: 93px;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
@@ -182,7 +184,7 @@
   }
 
   .living-example__desc {
-    margin-bottom: 67px;
+    margin-bottom: 65px;
   }
 
   .living-example__value {
