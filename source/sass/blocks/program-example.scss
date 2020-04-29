@@ -88,12 +88,13 @@
   &::after {
     position: absolute;
     content: "";
-    top: 6px;
+    top: 5px;
     right: -36px;
-    width: 25px;
+    width: 23px;
     height: 12px;
     background-image: url("../../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 
@@ -160,7 +161,7 @@
 
     &::after {
       top: 10px;
-      right: -47px;
+      right: -45px;
     }
   }
 }
@@ -223,9 +224,16 @@
   }
 
   .program-example__link {
+    &::after {
+      top: 7px;
+      right: -46px;
+    }
+
     &:hover {
       &::after {
+        right: -58px;
         width: 34px;
+        background-image: url("../../img/icon-right-arrow-verylong.svg");
       }
     }
   }
