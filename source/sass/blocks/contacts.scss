@@ -137,6 +137,7 @@
     z-index: 5;
     position: relative;
     margin-bottom: -297px;
+    pointer-events: none;
   }
 
   .contacts__header {
@@ -147,6 +148,7 @@
     top: 95px;
     left: 217px;
     background-color: #ffffff;
+    pointer-events: auto;
   }
 
   .contacts__value {
