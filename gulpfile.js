@@ -15,7 +15,8 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var server = require("browser-sync").create();
 var del = require("del");
-var minify = require('gulp-minify');
+var minify = require("gulp-minify");
+var htmlmin = require("gulp-htmlmin");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss") //получаем необходимые файлы
@@ -92,6 +93,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include() //добавит в тег <include src=""></include> например спрайты
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 

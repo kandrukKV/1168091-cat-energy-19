@@ -21,7 +21,9 @@
     "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.4.3",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "gulp-htmlmin": "^5.0.x",
+    "gulp-rename": "^2.0.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -45,9 +47,5 @@
   ],
   "engines": {
     "node": "8.16"
-  },
-  "dependencies": {
-    "gulp-rename": "^2.0.0",
-    "readable-stream": "^3.6.0"
   }
 }
