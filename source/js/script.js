@@ -1,6 +1,7 @@
 var navMain = document.querySelector('.main-nav');
 var pageHeader = document.querySelector('.page-header');
 var hamburger = document.querySelector('.hamburger');
+var orderButtons = document.querySelectorAll(".button.product-item__button");
 
 pageHeader.classList.remove('page-header--nojs');
 
@@ -21,13 +22,12 @@ hamburger.addEventListener('click', function () {
 
 });
 
-//==================  CatProgress =================
 
-var toggle = document.querySelector('.cat-progress__toggle');
+//===================Order==========================//
 
-toggle.onmousedown = function (evt) {
-  // toggle.style.zIndex = 1000;
-  // toggle.style.left = evt.pageX - toggle.offsetWidth / 2 + 'px';
-  console.log("Hello");
-  console.log(getComputedStyle(toggle).left)
-};
+for (var i = 0; i < orderButtons.length; i++) {
+  orderButtons[i].addEventListener("click", function (ev) {
+    ev.preventDefault();
+  })
+}
+
