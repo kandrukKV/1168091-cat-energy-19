@@ -30,4 +30,3 @@ for (var i = 0; i < orderButtons.length; i++) {
     ev.preventDefault();
   })
 }
-

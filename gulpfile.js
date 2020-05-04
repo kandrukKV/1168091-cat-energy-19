@@ -38,7 +38,8 @@ gulp.task("compress", function() {
     .pipe(minify({
       ext:{
         min:".min.js"
-      }
+      },
+      noSource: true
     }))
     .pipe(gulp.dest('build/js'));
 });
@@ -64,7 +65,7 @@ gulp.task("refresh", function (done) {
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png, jpg, svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({quality: 75, optimizationLevel: 5}),
       imagemin.mozjpeg({progressive: true}),
@@ -74,7 +75,7 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {  //конвертирует изображения в формат webp
-  return gulp.src("source/img/**/*.{png, jpg}")
+  return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
@@ -99,12 +100,10 @@ gulp.task("html", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
-    //"source/fonts/**/*.{woff2, woff}",
-    "source/fonts/**",
+    "source/fonts/**/*.{woff2,woff}",
     "source/img/**",
     "!source/img/sprites/**",
     "!source/img/preview/**",
-    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
