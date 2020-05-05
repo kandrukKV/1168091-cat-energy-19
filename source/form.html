@@ -8,6 +8,35 @@
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
 </head>
+
+<!-- Pixel Glass -->
+<style>
+  html {
+    background-repeat: no-repeat;
+    background-position: top center;
+    /* По умолчанию показывается мобильный макет */
+    background-image: url("img/preview/cat-energy-form-mobile.png");
+  }
+  /* Планшет */
+  @media (min-width: 768px) {
+    html {
+      /* Планшетный макет */
+      background-image: url("img/preview/cat-energy-form-tablet.png");
+    }
+  }
+  /* Десктоп */
+  @media (min-width: 1300px) {
+    html {
+      /* Десктопный макет */
+      background-image: url("img/preview/cat-energy-form-desktop.png");
+    }
+  }
+</style>
+<!--<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">-->
+<!--<script src="../node_modules/pixel-glass/script.js"></script>-->
+<link href="https://yoksel.github.io/pixel-glass-js/styles.css" rel="stylesheet">
+<script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+<!-- // Pixel Glass -->
 <body>
 
 <div style="display: none;">
@@ -49,17 +78,17 @@
 
       <div class="ps-form__name">
         <p class="ps-form__input-wrap">
-          <label class="ps-form__label" for="name">имя:*</label>
+          <label class="ps-form__label ps-form__label--name" for="name">имя:*</label>
           <input class="ps-form__input-txt" id="name" name="cat-name" type="text" placeholder="барсик">
         </p>
 
         <p class="ps-form__input-wrap">
-          <label class="ps-form__label" for="weight">вес(кг):*</label>
+          <label class="ps-form__label ps-form__label--weight" for="weight">вес(кг):*</label>
           <input class="ps-form__input-txt" id="weight" name="cat-weight" type="text" placeholder="7">
         </p>
 
         <p class="ps-form__input-wrap">
-          <label class="ps-form__label" for="age">возраст(лет):</label>
+          <label class="ps-form__label ps-form__label--age" for="age">возраст(лет):</label>
           <input class="ps-form__input-txt" id="age" name="cat-age" type="text" placeholder="7">
         </p>
       </div>
@@ -68,17 +97,17 @@
 
         <ul class="ps-form__radio-list">
           <li class="ps-form__radio-item">
-            <input class="ps-form__input-radio" id="weight-down" name="weight-change" type="radio" value="похудение" checked>
+            <input class="ps-form__input-radio visually-hidden" id="weight-down" name="weight-change" type="radio" value="похудение" checked>
             <label class="ps-form__radio-label" for="weight-down">похудение</label>
           </li>
 
           <li class="ps-form__radio-item">
-            <input class="ps-form__input-radio" id="weight-up" name="weight-change" type="radio" value="набор массы">
+            <input class="ps-form__input-radio visually-hidden" id="weight-up" name="weight-change" type="radio" value="набор массы">
             <label class="ps-form__radio-label" for="weight-up">набор массы</label>
           </li>
 
           <li class="ps-form__radio-item">
-            <input class="ps-form__input-radio" id="weight-noknow" name="weight-change" type="radio" value="не знаю">
+            <input class="ps-form__input-radio visually-hidden" id="weight-noknow" name="weight-change" type="radio" value="не знаю">
             <label class="ps-form__radio-label" for="weight-noknow">не знаю (нужен ваш совет)</label>
           </li>
         </ul>
@@ -89,11 +118,11 @@
 
     <div class="ps-form__contacts">
 
-      <h2 class="section-title ps-form__title"><span>Контактные данные <br> (владельца кота)</span></h2>
+      <h2 class="section-title ps-form__title"><span>Контактные данные<br> (владельца кота)</span></h2>
 
       <div class="ps-form__contacts-wrap">
         <div class="ps-form__input-wrap">
-          <label class="ps-form__label" for="email">e-mail:*</label>
+          <label class="ps-form__label ps-form__label--email" for="email">e-mail:*</label>
           <div class="ps-form__icon-wrap">
             <input class="ps-form__input-txt" id="email" name="cat-email" type="email" placeholder="kuklachev@gmail.com" required>
             <svg class="ps-form__icon" width="18" height="14">
@@ -103,7 +132,7 @@
         </div>
 
         <div class="ps-form__input-wrap">
-          <label class="ps-form__label" for="phone">телефон:*</label>
+          <label class="ps-form__label ps-form__label--phone" for="phone">телефон:*</label>
           <div class="ps-form__icon-wrap">
             <input class="ps-form__input-txt" id="phone" name="cat-phone" type="number" placeholder="8 (960) 900-60-90" required>
             <svg class="ps-form__icon" width="21" height="21">
@@ -126,22 +155,22 @@
 
       <ul class="ps-form__addition-list">
         <li class="ps-form__addition-item">
-          <input class="ps-form__input-check" id="sugar" name="cat-sugar" type="checkbox" checked>
+          <input class="ps-form__input-check visually-hidden" id="sugar" name="cat-sugar" type="checkbox" checked>
           <label class="ps-form__check-label" for="sugar">сахарозаменитель</label>
         </li>
 
         <li class="ps-form__addition-item">
-          <input class="ps-form__input-check" id="water" name="cat-water" type="checkbox">
+          <input class="ps-form__input-check visually-hidden" id="water" name="cat-water" type="checkbox">
           <label class="ps-form__check-label" for="water">питьевая вода</label>
         </li>
 
         <li class="ps-form__addition-item">
-          <input class="ps-form__input-check" id="milk" name="cat-milk" type="checkbox">
+          <input class="ps-form__input-check visually-hidden" id="milk" name="cat-milk" type="checkbox">
           <label class="ps-form__check-label" for="milk">молоко</label>
         </li>
 
         <li class="ps-form__addition-item">
-          <input class="ps-form__input-check" id="vitamins" name="cat-vitamins" type="checkbox">
+          <input class="ps-form__input-check visually-hidden" id="vitamins" name="cat-vitamins" type="checkbox">
           <label class="ps-form__check-label" for="vitamins">витамины</label>
         </li>
       </ul>
@@ -160,7 +189,10 @@
     <div class="contacts__header-wrap">
       <div class="contacts__header">
         <h2 class="contacts__head">приглашаем <br> к сотрудничеству <br> дилеров!</h2>
-        <p class="contacts__value">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
+        <div class="contacts__header-address">
+          <p class="contacts__value">ул. Большая <br> Конюшенная, д. 19/8</p>
+          <p class="contacts__city">Санкт-Петербург</p>
+        </div>
       </div>
     </div>
 

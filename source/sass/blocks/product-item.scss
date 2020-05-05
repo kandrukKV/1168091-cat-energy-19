@@ -45,6 +45,19 @@
   }
 }
 
+.product-item__name-link {
+  color: $text-color-1;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .product-item__desc {
   padding-top: 22px;
   width: 50%;

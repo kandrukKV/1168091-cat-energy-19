@@ -96,6 +96,10 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

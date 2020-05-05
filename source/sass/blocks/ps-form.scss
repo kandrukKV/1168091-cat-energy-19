@@ -15,26 +15,42 @@
 
 .ps-form__name {
   @include centrator;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .ps-form__label {
   color: $text-color-2;
-  margin-right: 12px;
+  margin-right: 14px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  &--weight {
+    margin-right: 20px;
+  }
+
+  &--age {
+    margin-right: 20px;
+  }
+
+  &--email {
+    margin-right: 11px;
+  }
+
+  &--phone {
+    margin-right: 11px;
+  }
 }
 
 .ps-form__input-wrap {
-  margin: 0 0 13px 0;
+  margin: 0 0 14px 0;
   display: flex;
   align-items: center;
 }
 
 .ps-form__input-txt {
   width: 100%;
-  padding: 14px 40px 14px 15px;
+  padding: 14px 40px 13px 15px;
   font-family: $first-font;
   font-size: 16px;
   line-height: 18px;
@@ -98,7 +114,9 @@
 }
 
 .ps-form__input-radio {
-  display: none;
+  &:focus + .ps-form__radio-label::before {
+    outline: 1px solid #4d90fe;
+  }
 
   &:checked + .ps-form__radio-label::after {
     display: block;
@@ -111,6 +129,8 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  cursor: pointer;
+  color: $text-color-2;
 
   &::before {
     position: absolute;
@@ -135,33 +155,28 @@
     background-color: $general-green;
   }
 
-  &:hover {
-    &::before {
-      border: solid 1px #bababa;
-    }
-  }
-
   &:active {
     opacity: 0.3;
   }
 }
 
 .ps-form__title {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 }
 
 .ps-form__contacts {
   @include centrator;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 }
 
 .ps-form__comments {
   @include centrator;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .ps-form__input-textarea {
-  padding: 13px;
+  padding: 13px 12px 11px 15px;
+  margin-top: 3px;
   resize: none;
   width: 100%;
   height: 150px;
@@ -197,7 +212,9 @@
 }
 
 .ps-form__input-check {
-  display: none;
+  &:focus + .ps-form__check-label::before {
+    outline: 1px solid #4d90fe;
+  }
 
   &:checked + .ps-form__check-label::before {
     background-image: url("../../img/icon-tick.svg");
@@ -212,6 +229,8 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  cursor: pointer;
+  color: $text-color-2;
 
   &::before {
     position: absolute;
@@ -222,12 +241,6 @@
     left: 0;
     border: solid 1px #cdcdcd;
     background-image: none;
-  }
-
-  &:hover {
-    &::before {
-      border-color: #bababa;
-    }
   }
 
   &:active {
@@ -262,7 +275,7 @@
   }
 
   .ps-form__message {
-    margin-bottom: 64px;
+    margin-bottom: 65px;
     padding-left: 70px;
     font-size: 20px;
     line-height: 30px;
@@ -271,6 +284,23 @@
   .ps-form__label {
     font-size: 20px;
     line-height: 20px;
+    margin-right: 18px;
+
+    &--weight {
+      margin-right: 26px;
+    }
+
+    &--age {
+      margin-right: 23px;
+    }
+
+    &--email {
+      margin-right: 22px;
+    }
+
+    &--phone {
+      margin-right: 16px;
+    }
   }
 
   .ps-form__item {
@@ -279,6 +309,10 @@
     margin-bottom: 75px;
     padding-left: 70px;
     padding-right: 67px;
+  }
+
+  .ps-form__icon {
+    right: 19px;
   }
 
   .ps-form__name {
@@ -291,7 +325,7 @@
   }
 
   .ps-form__input-txt {
-    padding: 11px 22px;
+    padding: 11px 18px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -349,6 +383,7 @@
 
   .ps-form__input-textarea {
     padding: 11px 19px;
+    margin-top: 0;
     height: 175px;
     font-size: 20px;
     line-height: 30px;
@@ -367,7 +402,7 @@
   }
 
   .ps-form__addition-title {
-    margin-bottom: 59px;
+    margin-bottom: 58px;
     margin-left: -20px;
   }
 

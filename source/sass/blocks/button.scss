@@ -21,12 +21,16 @@
   }
 
   &--gray {
-    background-color: $general-gray;
+    background-color: #f2f2f2;
     color: $text-color-4;
   }
 
   &--gray:hover {
     background-color: #ebebeb;
+  }
+
+  &--gray:active {
+    color: rgba(68, 68, 68, 0.3);
   }
 }
 

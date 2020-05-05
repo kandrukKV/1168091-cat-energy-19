@@ -9,6 +9,35 @@
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   </head>
 
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: top center;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/preview/cat-energy-index-mobile.png");
+    }
+    /* Планшет */
+    @media (min-width: 768px) {
+      html {
+        /* Планшетный макет */
+        background-image: url("img/preview/cat-energy-index-tablet.png");
+      }
+    }
+    /* Десктоп */
+    @media (min-width: 1300px) {
+      html {
+        /* Десктопный макет */
+        background-image: url("img/preview/cat-energy-index-desktop.png");
+      }
+    }
+  </style>
+  <!--<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">-->
+  <!--<script src="../node_modules/pixel-glass/script.js"></script>-->
+  <link href="https://yoksel.github.io/pixel-glass-js/styles.css" rel="stylesheet">
+  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+  <!-- // Pixel Glass -->
+
   <body>
 
     <div style="display: none;">
@@ -69,13 +98,17 @@
           <li class="program-example__item">
             <h2 class="program-example__title program-example__title--slim">похудение</h2>
             <p class="program-example__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="program-example__link" href="catalog.html">каталог slim</a>
+            <a class="program-example__link" href="catalog.html">
+              каталог slim
+            </a>
           </li>
 
           <li class="program-example__item">
             <h2 class="program-example__title program-example__title--pro">набор массы</h2>
             <p class="program-example__desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="program-example__link" href="catalog.html">каталог pro</a>
+            <a class="program-example__link" href="catalog.html">
+              каталог pro
+            </a>
           </li>
 
         </ul>

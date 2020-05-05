@@ -19,7 +19,7 @@
     content: "";
     width: 100vw;
     height: 3px;
-    top: calc(50% + 2px);
+    top: 14px;
     left: 50%;
     transform: translateX(-50%);
     background-color: $general-green;
@@ -33,7 +33,7 @@
     line-height: 36px;
 
     &::before {
-      top: calc(50% + 4px);
+      top: 21px;
     }
 
     span {
