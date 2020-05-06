@@ -158,8 +158,24 @@
     }
   }
 
+  .how-work__list {
+    justify-content: flex-start;
+  }
+
   .how-work__item {
     margin-right: 0;
     margin-bottom: 124px;
+
+    &--leaf {
+      margin-right: 94px;
+    }
+
+    &--powder {
+      margin-right: 75px;
+    }
+
+    &--dining {
+      margin-right: 70px;
+    }
   }
 }

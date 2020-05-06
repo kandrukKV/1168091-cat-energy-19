@@ -9,34 +9,13 @@
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
 </head>
 
-<!-- Pixel Glass -->
-<style>
-  html {
-    background-repeat: no-repeat;
-    background-position: top center;
-    /* По умолчанию показывается мобильный макет */
-    background-image: url("img/preview/cat-energy-form-mobile.png");
-  }
-  /* Планшет */
-  @media (min-width: 768px) {
-    html {
-      /* Планшетный макет */
-      background-image: url("img/preview/cat-energy-form-tablet.png");
-    }
-  }
-  /* Десктоп */
-  @media (min-width: 1300px) {
-    html {
-      /* Десктопный макет */
-      background-image: url("img/preview/cat-energy-form-desktop.png");
-    }
-  }
-</style>
-<!--<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">-->
-<!--<script src="../node_modules/pixel-glass/script.js"></script>-->
-<link href="https://yoksel.github.io/pixel-glass-js/styles.css" rel="stylesheet">
-<script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-<!-- // Pixel Glass -->
+
+<script>
+  document.createElement( "picture" );
+</script>
+<script src="js/picturefill.js" async></script>
+
+
 <body>
 
 <div style="display: none;">

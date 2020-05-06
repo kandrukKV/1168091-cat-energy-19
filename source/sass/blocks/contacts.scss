@@ -78,7 +78,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts__header {
-    padding: 65px 70px 55px 71px;
+    padding: 63px 70px 55px 71px;
 
     &--white {
       background-color: white;
@@ -120,12 +120,19 @@
   .contacts__pin {
     width: 113px;
     height: 106px;
+    top: 58%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+  }
+
+  .contacts__pin {
+    top: 227px;
+    right: 499px;
+    left: auto;
   }
 
   .contacts--white {

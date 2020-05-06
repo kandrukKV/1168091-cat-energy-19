@@ -33,7 +33,7 @@
 
 @media (min-width: $tablet-width) {
   .show-more {
-    @include centrator-clear($margin: 0 0 70px 0, $padding: 54px 40px 40px 40px, $width: 324px);
+    @include centrator-clear($margin: 0 0 70px 0, $padding: 53px 35px 39px 35px, $width: 324px);
     border: 1px solid #cdcdcd;
   }
 
@@ -48,7 +48,7 @@
 
   .show-more__title {
     margin: 0 auto;
-    margin-bottom: 28px;
+    margin-bottom: 27px;
     width: 150px;
     font-size: 20px;
   }
